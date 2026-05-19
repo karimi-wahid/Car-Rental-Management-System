@@ -10,6 +10,7 @@ import mongoSanitize from 'express-mongo-sanitize';
 import AppError from './utils/appError.js';
 import globalErrorHandler from './controllers/errorController.js';
 import userRouter from './routes/userRoutes.js';
+import authRouter from './routes/authRoutes.js';
 
 const app = express();
 
@@ -81,6 +82,7 @@ app.use((req, res, next) => {
 
 // 3) ROUTES
 app.use('/api/v1/users', userRouter);
+app.use('/api/v1/auth', authRouter);
 
 app.all(/(.*)/, (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));

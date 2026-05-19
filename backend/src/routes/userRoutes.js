@@ -12,7 +12,7 @@ import {
   updateUser,
   updateUserRole,
 } from '../controllers/userController.js';
-import { upload } from '../middleware/upload.js';
+import { upload } from '../middlewares/upload.js';
 
 const router = express.Router();
 
