@@ -9,6 +9,7 @@ import mongoSanitize from 'express-mongo-sanitize';
 //import hpp from 'hpp';
 import AppError from './utils/appError.js';
 import globalErrorHandler from './controllers/errorController.js';
+import userRouter from './routes/userRoutes.js';
 
 const app = express();
 
@@ -38,6 +39,16 @@ app.use('/api/auth', limiter);
 
 // Body parser, reading data from body into req.body
 app.use(express.json());
+
+app.use((req, res, next) => {
+  Object.defineProperty(req, 'query', {
+    value: { ...req.query },
+    writable: true,
+    configurable: true,
+    enumerable: true,
+  });
+  next();
+});
 
 // Data Sanitization against NoSQL query injection
 app.use(
@@ -69,6 +80,7 @@ app.use((req, res, next) => {
 });
 
 // 3) ROUTES
+app.use('/api/v1/users', userRouter);
 
 app.all(/(.*)/, (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
