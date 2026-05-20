@@ -12,6 +12,7 @@ import globalErrorHandler from './controllers/errorController.js';
 import userRouter from './routes/userRoutes.js';
 import authRouter from './routes/authRoutes.js';
 import carRouter from './routes/carRoutes.js';
+import bookingRouter from './routes/bookingRoutes.js';
 import contactRouter from './routes/contactRoutes.js';
 
 const app = express();
@@ -86,6 +87,7 @@ app.use((req, res, next) => {
 app.use('/api/v1/users', userRouter);
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/cars', carRouter);
+app.use('/api/v1/bookings', bookingRouter);
 app.use('/api/v1/contact', contactRouter);
 
 app.all(/(.*)/, (req, res, next) => {

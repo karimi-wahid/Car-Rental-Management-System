@@ -1,7 +1,7 @@
 import { Car } from '../models/carModel.js';
 import { Booking } from '../models/bookingModel.js';
 import cloudinary from '../config/cloudinary.js';
-import AppError from '../utils/AppError.js';
+import AppError from '../utils/appError.js';
 import catchAsync from '../utils/catchAsync.js';
 import ApiFetuares from '../utils/apiFeatures.js';
 import mongoose from 'mongoose';
