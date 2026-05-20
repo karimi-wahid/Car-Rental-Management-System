@@ -2,7 +2,7 @@ import { Booking } from '../models/bookingModel.js';
 import { Car } from '../models/carModel.js';
 import User from '../models/userModel.js';
 import catchAsync from '../utils/catchAsync.js';
-import AppError from '../utils/AppError.js';
+import AppError from '../utils/appError.js';
 import mongoose from 'mongoose';
 
 // Define BookingStatus if not imported from elsewhere
