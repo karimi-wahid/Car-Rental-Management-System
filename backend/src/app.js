@@ -15,6 +15,7 @@ import carRouter from './routes/carRoutes.js';
 import bookingRouter from './routes/bookingRoutes.js';
 import contactRouter from './routes/contactRoutes.js';
 import feedbackRouter from './routes/feedbackRoutes.js';
+import commentRouter from './routes/commentRoutes.js';
 
 const app = express();
 
@@ -91,6 +92,7 @@ app.use('/api/v1/cars', carRouter);
 app.use('/api/v1/bookings', bookingRouter);
 app.use('/api/v1/contact', contactRouter);
 app.use('/api/v1/feedback', feedbackRouter);
+app.use('/api/v1/comments', commentRouter);
 
 app.all(/(.*)/, (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
