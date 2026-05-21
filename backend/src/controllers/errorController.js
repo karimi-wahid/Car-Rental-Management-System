@@ -53,6 +53,7 @@ const sendErrorProd = (err, res) => {
     // 2) Send generaic message
     res.status(500).json({
       status: 'error',
+      error: err,
       message: 'Something went very wrong!',
     });
   }

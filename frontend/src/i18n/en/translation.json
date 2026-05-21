@@ -1,0 +1,491 @@
+{
+  "hero": {
+    "badge": "Premium Car Rental Experience",
+    "title1": "Drive Your Dream Car",
+    "title2": "With Luxury and Style",
+    "description": "Experience automotive excellence. Choose from our premium luxury car collection with unmatched comfort and performance.",
+    "viewCars": "View Cars",
+    "learnMore": "Learn More",
+
+    "stats": {
+      "cars": "Luxury Cars",
+      "support": "Customer Support",
+      "customers": "Satisfied Customers"
+    }
+  },
+  "day": "day",
+  "person": "persons",
+  "unavailable": "Unavailable",
+
+  "fuel": {
+    "petrol": "Petrol",
+    "diesel": "Diesel",
+    "electric": "Electric",
+    "hybrid": "Hybrid"
+  },
+
+  "transmission": {
+    "automatic": "Automatic",
+    "manual": "Manual"
+  },
+
+  "featured": {
+    "selection": "Featured Selection",
+    "title": "Featured Cars",
+    "viewAll": "View All",
+    "viewAllCars": "View All Cars"
+  },
+  "features": {
+    "whyChooseUs": "Why Choose Us",
+    "title1": "Exceptional",
+    "title2": "Services",
+
+    "description": "We do more than car rentals — we provide an experience tailored to the highest international standards.",
+
+    "items": {
+      "protection": {
+        "title": "Premium Protection",
+        "description": "Full insurance coverage included with every rental for complete peace of mind."
+      },
+
+      "support24": {
+        "title": "24/7 Availability",
+        "description": "Round-the-clock services with flexible pickup and drop-off times."
+      },
+
+      "payment": {
+        "title": "Secure Payment",
+        "description": "Multiple payment options with bank-level security encryption."
+      },
+
+      "delivery": {
+        "title": "Location Delivery",
+        "description": "Multiple delivery points across the city, including airport terminals."
+      },
+
+      "concierge": {
+        "title": "Dedicated Service",
+        "description": "Personal concierge assistance for your special requests."
+      },
+
+      "premium": {
+        "title": "Premium Cars",
+        "description": "A curated collection of the world's finest luxury vehicles."
+      }
+    }
+  },
+  "howItWorks": {
+    "badge": "Simple & Fast Process",
+    "title": "How It Works",
+    "description": "Just four simple steps to get your dream car",
+
+    "steps": {
+      "browse": {
+        "title": "Browse & Choose",
+        "description": "Explore our premium fleet and choose the perfect car for your needs."
+      },
+
+      "dates": {
+        "title": "Select Dates",
+        "description": "Choose your pickup and return dates with our flexible booking system."
+      },
+
+      "booking": {
+        "title": "Secure Booking",
+        "description": "Complete your reservation through our secure payment process."
+      },
+
+      "drive": {
+        "title": "Pick Up & Drive",
+        "description": "Get your keys and enjoy an unforgettable driving experience."
+      }
+    }
+  },
+  "cta": {
+    "badge": "Start Your Premium Experience",
+
+    "title1": "Ready to Drive",
+    "title2": "in Style?",
+
+    "description": "Join thousands of happy customers who have enjoyed our premium fleet and exceptional service.",
+
+    "viewCars": "View Cars",
+    "contactUs": "Contact Us",
+
+    "phone": "Phone",
+    "email": "Email",
+    "booking": "Booking",
+
+    "online247": "24/7 Online"
+  },
+  "about": {
+    "badge": "About Us",
+
+    "heroTitle1": "Luxury Car Rental",
+    "heroTitle2": "With Exceptional Service",
+
+    "heroDescription": "Since 2016, we have delivered the best car rental experience with a fleet of the world's finest vehicles and 24/7 support.",
+
+    "viewCars": "View Cars",
+    "contactUs": "Contact Us",
+
+    "stats": {
+      "cars": "Cars in Fleet",
+      "customers": "Satisfied Customers",
+      "experience": "Years Experience",
+      "support": "Support"
+    },
+
+    "storyBadge": "Our Story",
+
+    "storyTitle1": "From a Dream to the Largest",
+    "storyTitle2": "Luxury Car Fleet",
+
+    "storyParagraph1": "Our company started in 2016 with 15 cars and a small team of five people. Our goal was simple: provide the best luxury car rental experience.",
+
+    "storyParagraph2": "Today, with more than 500 luxury vehicles and thousands of satisfied customers, we are recognized as a leader in the luxury car rental industry.",
+
+    "checks": {
+      "insurance": "Full insurance for all vehicles",
+      "delivery": "Delivery anywhere in the city",
+      "support": "24-hour customer support"
+    },
+
+    "milestones": {
+      "one": "Company founded with 15 cars",
+      "two": "Expanded to 100 luxury cars",
+      "three": "Launched online platform"
+    },
+
+    "valuesBadge": "Our Values",
+    "valuesTitle": "Why Choose Us?",
+
+    "values": {
+      "security": {
+        "title": "Trust & Security",
+        "description": "All our vehicles are regularly inspected and fully insured."
+      },
+
+      "delivery": {
+        "title": "On-Time Delivery",
+        "description": "Your vehicle will always be ready at your chosen time and location."
+      },
+
+      "quality": {
+        "title": "Exceptional Quality",
+        "description": "Our fleet includes the world's top luxury brands."
+      },
+
+      "team": {
+        "title": "Professional Team",
+        "description": "Our specialists are always ready to assist and guide you."
+      }
+    },
+
+    "teamBadge": "Our Team",
+    "teamTitle": "The People Behind Our Success",
+
+    "contactTitle": "Get in Touch",
+    "contactDescription": "We are here for all your questions",
+
+    "ctaTitle": "Ready to Start Your Journey?",
+    "ctaDescription": "Choose from over 500 luxury cars and book today.",
+
+    "bookCar": "Book a Car",
+    "back": "Back"
+  },
+  "contact": {
+    "badge": "Contact Us",
+    "title": "How Can We Help?",
+    "description": "Our team is ready to answer your questions and solve your problems.",
+
+    "faqTitle": "Frequently Asked Questions",
+
+    "successTitle": "Your Message Has Been Sent!",
+    "successDescription": "Thank you for contacting us.",
+    "tracking": "Tracking ID",
+    "newMessage": "Send New Message",
+
+    "sendMessage": "Send Message",
+
+    "fullName": "Full Name *",
+    "email": "Email *",
+    "phone": "Phone Number",
+    "subject": "Subject *",
+    "message": "Message *",
+
+    "namePlaceholder": "John Doe",
+    "emailPlaceholder": "you@example.com",
+    "phonePlaceholder": "+1 000 000 000",
+    "subjectPlaceholder": "Select subject",
+    "messagePlaceholder": "Write your message here...",
+
+    "submit": "Send Message",
+    "sending": "Sending...",
+
+    "toastSuccess": "Your message has been sent!",
+
+    "info": {
+      "address": "Address",
+      "addressValue": "Kabul, District 3, Darulaman Road",
+
+      "phone": "Phone",
+
+      "email": "Email",
+
+      "hours": "Working Hours",
+      "hoursValue": "Saturday to Thursday, 8 AM to 8 PM"
+    },
+
+    "subjects": {
+      "general": "General Question",
+      "booking": "Booking Issue",
+      "complaint": "Complaint",
+      "partnership": "Business Partnership",
+      "other": "Other"
+    },
+
+    "faq": {
+      "q1": "How can I book a car?",
+      "a1": "Select your preferred car, choose the dates, and click the booking button.",
+
+      "q2": "Can I cancel my booking?",
+      "a2": "Yes, you can cancel up to 24 hours before your booking starts.",
+
+      "q3": "What documents are required?",
+      "a3": "A valid driving license and national ID or passport are required.",
+
+      "q4": "Is delivery available?",
+      "a4": "Yes, free delivery is available for bookings longer than 3 days."
+    },
+
+    "validation": {
+      "nameRequired": "Name is required",
+      "nameShort": "Name is too short",
+
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email address",
+
+      "subjectRequired": "Subject is required",
+
+      "messageRequired": "Message is required",
+      "messageShort": "Message must be at least 10 characters",
+      "messageLong": "Message cannot exceed 2000 characters"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome Back",
+      "subtitle": "Login to continue to your account",
+      "email": "Email Address",
+      "password": "Password",
+      "forgotPassword": "Forgot password?",
+      "showPassword": "Show password",
+      "hidePassword": "Hide password",
+      "submit": "Login",
+      "loading": "Logging in...",
+      "noAccount": "Don't have an account?",
+      "register": "Register"
+    },
+    "register": {
+      "title": "Create Account",
+      "subtitle": "Sign up to start your luxury car rental experience",
+
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "John Doe",
+
+      "email": "Email Address",
+      "emailPlaceholder": "you@example.com",
+
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+
+      "createAccount": "Create Account",
+      "creatingAccount": "Creating account...",
+
+      "alreadyHaveAccount": "Already have an account?",
+      "login": "Login",
+
+      "termsText": "By signing up, you agree to our",
+      "terms": "Terms & Conditions",
+      "and": "and",
+      "privacy": "Privacy Policy",
+      "agreeText": ".",
+
+      "passwordStrength": "Password Strength",
+
+      "strength": {
+        "weak": "Weak",
+        "medium": "Medium",
+        "strong": "Strong"
+      },
+
+      "requirementsTitle": "Password must contain:",
+
+      "requirements": {
+        "min": "At least 8 characters",
+        "lowercase": "One lowercase letter",
+        "uppercase": "One uppercase letter",
+        "number": "One number",
+        "special": "One special character"
+      },
+
+      "toast": {
+        "verifyEmail": "Check your email and enter the verification code"
+      },
+
+      "validation": {
+        "nameRequired": "Full name is required",
+        "nameMin": "Name must be at least 2 characters",
+        "nameMax": "Name cannot exceed 50 characters",
+
+        "emailRequired": "Email is required",
+        "emailInvalid": "Invalid email address",
+
+        "passwordRequired": "Password is required",
+        "passwordMin": "Password must be at least 8 characters",
+        "passwordWeak": "Weak password. Please choose a stronger password",
+
+        "confirmRequired": "Password confirmation is required",
+        "passwordMismatch": "Passwords do not match"
+      }
+    },
+    "reset": {
+      "title": "Set New Password",
+      "subtitle": "Please enter your new password.",
+
+      "backToLogin": "Back to Login",
+
+      "newPassword": "New Password",
+      "confirmPassword": "Confirm Password",
+
+      "passwordStrength": "Password Strength",
+
+      "submit": "Reset Password",
+      "loading": "Resetting...",
+
+      "successTitle": "Password Reset Successfully!",
+      "successDescription": "Your password has been changed. Redirecting to dashboard...",
+
+      "invalidTitle": "Invalid or Expired Link",
+      "invalidDescription": "Please request a new reset link.",
+
+      "requestNewLink": "Request New Link",
+
+      "invalidLink": "Invalid reset link",
+
+      "strength": {
+        "weak": "Weak",
+        "medium": "Medium",
+        "strong": "Strong"
+      },
+
+      "requirementsTitle": "Password must contain:",
+
+      "requirements": {
+        "min": "8 characters",
+        "lowercase": "Lowercase",
+        "uppercase": "Uppercase",
+        "number": "Number",
+        "special": "Special character"
+      },
+
+      "validation": {
+        "passwordMin": "Password must be at least 8 characters",
+        "lowercase": "Password must contain lowercase letters",
+        "uppercase": "Password must contain uppercase letters",
+        "number": "Password must contain a number",
+        "special": "Password must contain a special character",
+
+        "confirmRequired": "Password confirmation is required",
+
+        "passwordMismatch": "Passwords do not match"
+      }
+    },
+    "forgot": {
+      "title": "Forgot Password?",
+      "subtitle": "Enter your email to receive a password reset link.",
+
+      "email": "Email Address",
+      "emailPlaceholder": "you@example.com",
+
+      "submit": "Send Reset Link",
+      "loading": "Sending...",
+
+      "backToLogin": "Back to Login",
+
+      "rememberPassword": "Remembered your password? Login",
+
+      "successTitle": "Check Your Email",
+
+      "successDescription": "A password reset link was sent to",
+
+      "noEmail": "Didn't receive the email?",
+
+      "tryAgain": "Try Again",
+
+      "validation": {
+        "emailRequired": "Email is required",
+        "emailInvalid": "Invalid email address"
+      }
+    },
+    "verify": {
+      "loadingTitle": "Verifying Email...",
+      "loadingSubtitle": "Please wait...",
+
+      "successTitle": "Email Verified!",
+      "successMessage": "Your email was successfully verified!",
+      "toastSuccess": "Email verified!",
+      "redirecting": "Redirecting to dashboard...",
+      "goDashboard": "Go to Dashboard",
+
+      "failedTitle": "Verification Failed",
+      "failed": "Verification failed",
+
+      "invalidOtp": "Invalid or expired verification code",
+
+      "verifyCode": "Verify Code",
+      "verifying": "Verifying...",
+
+      "enterOtp": "Please enter the verification code sent to your email",
+
+      "enterCode": "Enter the 6-digit code sent to",
+      "enterCodeSuffix": "",
+
+      "resendCode": "Resend Code",
+
+      "resendCountdown": "Resend in {{seconds}} seconds",
+
+      "resendSuccess": "Verification code sent!",
+
+      "resendFailed": "Failed to resend code",
+
+      "sendFailed": "Failed to send code",
+
+      "sending": "Sending...",
+
+      "sendCode": "Send Verification Code",
+
+      "enterEmail": "Please enter your email",
+
+      "emailNotFound": "Email address not found. Please enter your email.",
+
+      "enterEmailDescription": "Enter your email address to receive a verification code.",
+
+      "emailPlaceholder": "your@email.com",
+
+      "useOtp": "Please use the verification code",
+
+      "noVerificationMethod": "No verification method provided",
+
+      "noAccount": "Don't have an account? Register"
+    }
+  },
+  "callback": {
+    "invalid": "Verification link is invalid or has expired.",
+    "success": "Email verified! Welcome 🎉",
+    "loginRequired": "Email verified! Please log in.",
+    "somethingWrong": "Something went wrong. Please try logging in.",
+    "loading": "Verifying your email..."
+  }
+}
