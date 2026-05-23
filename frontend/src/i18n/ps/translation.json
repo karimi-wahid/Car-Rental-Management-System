@@ -490,5 +490,368 @@
     "loginRequired": "ایمیل تایید شو! مهرباني وکړئ ننوځئ.",
     "somethingWrong": "یو څه ستونزه رامنځته شوه. مهرباني وکړئ بیا ننوځئ.",
     "loading": "ستاسو ایمیل تاییدیږي..."
+  },
+  "unauthorized": {
+    "title": "غیر مجاز لاسرسی",
+    "description": "تاسو د دې پاڼې د لیدلو اجازه نه لرئ.",
+    "yourRole": "ستاسو رول:",
+    "allowedRoles": "اجازه لرونکي رولونه:",
+    "goDashboard": "ډشبورډ ته لاړ شئ",
+    "goBack": "مخکنۍ پاڼې ته ستنېدل",
+
+    "roles": {
+      "admin": "اډمین",
+      "user": "کارن"
+    }
+  },
+  "cars": {
+    "title": "زموږ موټرونه",
+    "description": "له زموږ د لوکس او لوړ کیفیت موټرونو څخه انتخاب وکړئ",
+
+    "empty": {
+      "title": "هیڅ موټر ونه موندل شو",
+      "description": "ستاسو د لټون له معیارونو سره سم هېڅ موټر ونه موندل شو. مهرباني وکړئ فلټرونه بدل کړئ.",
+      "resetFilters": "فلټرونه بیا تنظیم کړئ"
+    }
+  },
+  "car": {
+    "perDay": "په ورځ",
+    "day": "ورځ",
+    "availableForBooking": "د بکینګ لپاره موجود",
+    "notAvailable": "موجود نه دی",
+    "instantConfirmation": "فوري تایید",
+    "fullInsurance": "بشپړ بیمه",
+    "delivery": "په ځای سپارل",
+    "support247": "۲۴/۷ ملاتړ",
+    "back": "بېرته",
+    "loading": "د بارېدو په حال کې",
+    "carNotFound": "موټر ونه موندل شو",
+    "backToCars": "موټرو ته بېرته",
+    "bookNow": "اوس بک کړئ",
+    "share": "شریکول",
+    "reviews": "بیاکتنې",
+    "comments": "تبصرې",
+
+    "specs": {
+      "capacity": "ظرفیت",
+      "fuel": "تیل",
+      "mileage": "مایلیج",
+      "year": "کال"
+    },
+
+    "fuelTypes": {
+      "petrol": "پټرول",
+      "diesel": "ډیزل",
+      "electric": "برقي",
+      "hybrid": "هایبرډ"
+    },
+
+    "transmission": {
+      "automatic": "اتومات",
+      "manual": "لاسي"
+    },
+
+    "tabs": {
+      "specs": "تخنیکي مشخصات",
+      "features": "ځانګړتیاوې",
+      "policy": "د کرایې شرایط"
+    },
+
+    "policy": {
+      "validLicense": "د موټر چلولو معتبر جواز اړین دی",
+      "minimumAge": "د چلوونکي لږ تر لږه عمر: ۱۸ کاله",
+      "freeDelivery": "د ۳ ورځو څخه د زیاتو بکینګونو لپاره وړیا سپارل",
+      "freeCancellation": "د سپارلو څخه ۲۴ ساعته مخکې وړیا لغوه کول",
+      "unlimitedMileage": "نامحدود مایلیج شامل دی",
+      "support": "۲۴/۷ د لارې مرسته"
+    },
+
+    "trust": {
+      "insurance": "بشپړ بیمه",
+      "confirmation": "فوري تایید",
+      "delivery": "په ځای سپارل",
+      "support": "۲۴/۷ ملاتړ"
+    }
+  },
+  "carSpecs": {
+    "specifications": "فني مشخصات",
+    "description": "تشریحات",
+    "features": "ځانګړتیاوې او اسانتیاوې",
+    "brand": "برانډ",
+    "model": "ماډل",
+    "year": "کال",
+    "seats": "څوکۍ",
+    "personCount": "{{count}} کس",
+    "personCount_plural": "{{count}} کسان",
+    "transmission": "ګیربکس",
+    "fuelType": "د تیلو ډول",
+    "mileage": "کیلومتراژ",
+    "mileageValue": "{{mileage}} کیلومتره",
+    "color": "رنګ",
+    "licensePlate": "نمبر پلیټ",
+    "unspecified": "نامعلوم",
+    "available": "د بک کولو وړ",
+    "unavailable": "اوس مهال نشته",
+    "temporarilyUnavailable": "دا موټر په لنډمهاله توګه نشته. مهرباني وکړئ وروسته راشئ."
+  },
+  "carFeatures": {
+    "airConditioning": "یخچال",
+    "heatedSeats": "ګرمې څوکۍ",
+    "bluetooth": "بلوتوث",
+    "wifi": "وای فای",
+    "gps": "جی پی ایس",
+    "coffeeMachine": "قهوه جوړونکی",
+    "usbCharger": "یو ایس بی چارجر"
+  },
+  "carReviews": {
+    "reviews": "نظریې",
+    "writeReview": "نظر لیکل",
+    "reviewCount": "{{count}} نظر",
+    "reviewCount_plural": "{{count}} نظریې",
+    "newest": "نوي",
+    "highestRated": "لوړه درجه",
+    "lowestRated": "ټیټه درجه",
+    "noReviews": "تر اوسه کوم نظر ندی ثبت شوی",
+    "beFirstToReview": "لومړی کس اوسئ چې خپله تجربه شریکوي.",
+    "reviewsAfterBooking": "نظریې به دلته د کرایې بشپړیدو وروسته ښکاره شي.",
+    "loadMore": "نور نظریې بار کړئ"
+  },
+  "feedbackForm": {
+    "writeReview": "نظر لیکل",
+    "editReview": "نظر سمول",
+    "yourRating": "ستاسو درجه",
+    "titlePlaceholder": "لنډیز (اختیاري)",
+    "commentPlaceholder": "خپله تجربه شریک کړئ...",
+    "submitReview": "نظر ثبت کړئ",
+    "ratingRequired": "مهرباني وکړئ درجه ورکړئ",
+    "commentRequired": "مهرباني وکړئ خپل نظر وليکئ",
+    "createSuccess": "نظر ثبت شو!",
+    "updateSuccess": "نظر سم شو!",
+    "errorMessage": "یوه تېروتنه رامنځته شوه. مهرباني وکړئ بیا هڅه وکړئ.",
+    "common": {
+      "cancel": "لغوه کول",
+      "submitting": "لیږل کیږي..."
+    }
+  },
+  "reviewCard": {
+    "anonymous": "نا معلوم",
+    "verifiedBooking": "تایید شوی کرایه",
+    "ownerResponse": "د مالک ځواب",
+    "deleteConfirmTitle": "دا نظر ړنګ کړئ؟",
+    "deleteConfirmDescription": "دا عمل بیرته نه ګرځیدونکی دی.",
+    "delete": "ړنګول",
+    "deleteSuccess": "نظر ړنګ شو",
+    "deleteError": "نظر ړنګول ناکام شول",
+    "editReview": "نظر سمول",
+    "deleteReview": "نظر ړنګول",
+    "common": {
+      "cancel": "لغوه کول"
+    }
+  },
+  "carComments": {
+    "comments": "نظریې",
+    "commentPlaceholder": "خپل نظر شریک کړئ...",
+    "loginToJoin": "د خبرو اترو د یوځای کیدو لپاره ننوځئ",
+    "noComments": "تر اوسه کوم نظر نشته",
+    "beFirstToComment": "لومړی کس اوسئ چې نظر ورکوي.",
+    "loadMore": "نور نظریې بار کړئ"
+  },
+  "commentInput": {
+    "writePlaceholder": "خپل نظر وليکئ...",
+    "replyPlaceholder": "خپل ځواب وليکئ...",
+    "editPlaceholder": "خپل نظر سم کړئ...",
+    "post": "لیږل",
+    "edit": "سمول",
+    "charCount": "{{current}}/{{max}}",
+    "exceedsLimit": "له حد څخه زیات",
+    "commentRequired": "مهرباني وکړئ خپل نظر وليکئ",
+    "commentTooLong": "نظر له {{max}} توري څخه زیات نشي کیدی",
+    "createSuccess": "نظر لیږل شوی",
+    "updateSuccess": "نظر سم شوی",
+    "errorMessage": "یوه تېروتنه رامنځته شوه. مهرباني وکړئ بیا هڅه وکړئ.",
+    "shortcutHint": "د لیږلو لپاره",
+    "common": {
+      "cancel": "لغوه کول",
+      "sending": "لیږل کیږي..."
+    }
+  },
+
+  "commentItem": {
+    "anonymous": "نامعلوم",
+    "justNow": "همدا اوس",
+    "minutesAgo": "{{count}} دقیقه مخکې",
+    "minutesAgo_plural": "{{count}} دقیقې مخکې",
+    "hoursAgo": "{{count}} ساعت مخکې",
+    "hoursAgo_plural": "{{count}} ساعتونه مخکې",
+    "daysAgo": "{{count}} ورځ مخکې",
+    "daysAgo_plural": "{{count}} ورځې مخکې",
+    "edited": "سم شوی",
+    "pendingApproval": "د تصویب په انتظار کې",
+    "teamResponse": "د ټیم ځواب",
+    "reply": "ځواب",
+    "edit": "سمول",
+    "delete": "ړنګول",
+    "hideReplies": "ځوابونه پټ کړئ",
+    "showRepliesCount": "{{count}} ځواب وښایئ",
+    "showRepliesCount_plural": "{{count}} ځوابونه وښایئ",
+    "replyToUser": "{{name}} ته ځواب...",
+    "deleteConfirmTitle": "دا نظر ړنګ کړئ؟",
+    "deleteConfirmDescription": "دا به ټول ځوابونه هم ړنګ کړي. دا عمل بیرته نه ګرځیدونکی دی.",
+    "deleteSuccess": "نظر ړنګ شو",
+    "deleteError": "نظر ړنګول ناکام شول",
+    "likeError": "لایک تازه کول ناکام شول",
+    "loginToLike": "مهرباني وکړئ د لایک کولو لپاره ننوځئ",
+    "common": {
+      "cancel": "لغوه کول"
+    }
+  },
+  "bookingCalendar": {
+    "bookThisCar": "دا موټر بک کړئ",
+    "perDay": "په ورځ کې",
+    "selectDuration": "د کرایې موده وټاکئ",
+    "bookingSummary": "د بک لنډیز",
+    "startDate": "پیل نیټه",
+    "endDate": "پای نیټه",
+    "duration": "موده",
+    "daysCount": "{{count}} ورځ",
+    "daysCount_plural": "{{count}} ورځې",
+    "discount": "تخفیف",
+    "weeklyDiscount": "اوونیز تخفیف",
+    "monthlyDiscount": "میاشتنی تخفیف",
+    "total": "ټولټال",
+    "selectDates": "نیټې وټاکئ",
+    "bookNowPrice": "اوس بک کړئ - {{price}}",
+    "freeCancellation": "وړیا منسوخي",
+    "bestPriceGuarantee": "د غوره قیمت تضمین",
+    "carUnavailable": "دا موټر اوس مهال نشته. مهرباني وکړئ وروسته راشئ یا نور انتخابونه وګورئ."
+  },
+  "carCard": {
+    "unavailable": "نشته",
+    "electric": "برقی",
+    "perDay": "/ ورځ",
+    "capacity": "ظرفیت",
+    "fuel": "سوخت",
+    "mileage": "کیلومتراژ",
+    "seatsCount": "{{count}} څوکۍ",
+    "seatsCount_plural": "{{count}} څوکۍ",
+    "viewDetails": "تفصیلات وګورئ",
+    "notAvailable": "د لاسرسي وړ نه دی",
+    "carFeatures": {
+      "airconditioning": "یخچال",
+      "heatedseats": "ګرمې څوکۍ",
+      "bluetooth": "بلوتوث",
+      "wifi": "وای فای",
+      "gps": "جی پی ایس",
+      "coffeemachine": "قهوه جوړونکی",
+      "usbcharger": "یو ایس بی چارجر",
+      "navigation": "نیویگیشن",
+      "sunroof": "سن روف",
+      "leatherseats": "چرمي څوکۍ",
+      "backupcamera": "شاته کیمرا",
+      "parkingsensors": "پارک سنسرونه",
+      "cruisecontrol": "کروز کنټرول"
+    }
+  },
+  "carFilters": {
+    "filters": "فلټرونه",
+    "search": "لټون",
+    "searchPlaceholder": "په نوم، برانډ لټون وکړئ...",
+    "brand": "برانډ",
+    "allBrands": "ټول برانډونه",
+    "priceRange": "د قیمت محدوده (په ورځ کې)",
+    "transmission": "ګیربکس",
+    "fuelType": "د تیلو ډول",
+    "seats": "څوکۍ",
+    "all": "ټول",
+    "seatsCount": "{{count}} څوکۍ",
+    "seatsCountPlus": "{{count}}+ څوکۍ",
+    "clearAllFilters": "ټول فلټرونه پاک کړئ"
+  },
+  "carSorting": {
+    "sortBy": "ترتیب سورت",
+    "newestFirst": "نوي لومړی",
+    "oldestFirst": "زاړه لومړی",
+    "priceLowToHigh": "بیه: له کم څخه تر زیاته",
+    "priceHighToLow": "بیه: له زیاته څخه تر کمه",
+    "nameAscending": "نوم: له الف څخه تر ي",
+    "nameDescending": "نوم: له ي څخه تر الف",
+    "yearNewestFirst": "کال: نوي لومړی",
+    "yearOldestFirst": "کال: زاړه لومړی"
+  },
+  "favoriteButton": {
+    "addedToFavorites": "خوښوونو ته اضافه شو",
+    "removedFromFavorites": "له خوښوونو څخه لیرې شو",
+    "addToFavorites": "خوښوونو ته اضافه کړئ",
+    "removeFromFavorites": "له خوښوونو څخه لیرې کړئ",
+    "errorOccurred": "یوه تېروتنه رامنځته شوه"
+  },
+  "navbar": {
+    "home": "کور",
+    "cars": "موټرونه",
+    "about": "زموږ په اړه",
+    "contact": "اړیکه",
+    "dashboard": "ډشبورډ",
+    "adminPanel": "اډمین پینل",
+    "profile": "پروفایل",
+    "logout": "وتل",
+    "login": "ننوتل",
+    "register": "راجستر"
+  },
+  "roles": {
+    "admin": "اډمین",
+    "user": "کارن"
+  },
+  "footer": {
+    "brandDescription": "د موټر کرایې غوره خدمات زموږ د لوکس بیړۍ او د پیرودونکي استثنایی پاملرنې سره تجربه کړئ.",
+    "quickLinks": "چټکې اړیکې",
+    "about": "زموږ په اړه",
+    "ourCars": "زموږ موټرونه",
+    "contact": "اړیکه",
+    "faq": "په مکرر ډول پوښتل شوي پوښتنې",
+    "services": "خدمتونه",
+    "airportTransfers": "د هوایی ډګر لیږد",
+    "longTermRentals": "اوږدمهاله کرایه",
+    "corporateAccounts": "شرکتي حسابونه",
+    "chauffeuredServices": "د چلوونکي خدمات",
+    "contactUs": "زموږ سره اړیکه ونیسئ",
+    "address": "کابل ۱۲۳، کارته نو، کابل ولایت",
+    "copyright": "ټول حقونه خوندي دي."
+  },
+  "emptyState": {
+    "defaultTitle": "هیچ موټر ونه موندل شو",
+    "defaultDescription": "مهرباني وکړئ خپل فلټرونه یا د لټون معیارونه تنظیم کړئ",
+    "resetFilters": "فلټرونه بیا تنظیم کړئ",
+    "viewAllCars": "ټول موټرونه وګورئ"
+  },
+  "protectedRoute": {
+    "checkingAccess": "لاسرسی تایید کیږي...",
+    "unauthorized": "غیر مجاز لاسرسی",
+    "redirecting": "لیږدول کیږي..."
+  },
+  "common": {
+    "profile": "پروفایل",
+    "settings": "ترتیبات",
+    "viewSite": "سایت وګورئ",
+    "darkMode": "تیاره حالت",
+    "lightMode": "رڼا حالت",
+    "back": "بېرته"
+  },
+  "adminNavbar": {
+    "adminPanel": "د مدیریت پینل",
+    "admin": "مدیر",
+    "systemAdmin": "د سیسټم مدیر",
+    "logout": "وتل"
+  },
+  "adminSidebar": {
+    "dashboard": "ډشبورد",
+    "carManagement": "د موټرو مدیریت",
+    "userManagement": "د کاروونکو مدیریت",
+    "bookings": "بکینګونه",
+    "comments": "نظریې",
+    "messages": "پیغامونه",
+    "help": "مرسته",
+    "admin": "مدیر",
+    "systemAdmin": "د سیسټم مدیر",
+    "logout": "وتل"
   }
 }

@@ -490,5 +490,364 @@
     "loginRequired": "ایمیل تایید شد! لطفاً وارد شوید.",
     "somethingWrong": "مشکلی رخ داد. لطفاً وارد حساب شوید.",
     "loading": "در حال تایید ایمیل..."
+  },
+  "unauthorized": {
+    "title": "دسترسی غیرمجاز",
+    "description": "شما دسترسی لازم برای مشاهده این صفحه را ندارید.",
+    "yourRole": "نقش شما:",
+    "allowedRoles": "نقش‌های مجاز:",
+    "goDashboard": "رفتن به داشبورد",
+    "goBack": "برگشت به صفحه قبلی",
+
+    "roles": {
+      "admin": "ادمین",
+      "user": "کاربر"
+    }
+  },
+  "cars": {
+    "title": "موترهای ما",
+    "description": "از مجموعه موترهای لوکس و باکیفیت ما انتخاب کنید",
+
+    "empty": {
+      "title": "هیچ موتری یافت نشد",
+      "description": "هیچ موتری با معیارهای جستجوی شما یافت نشد. لطفاً فیلترها را تغییر دهید.",
+      "resetFilters": "بازنشانی فیلترها"
+    }
+  },
+  "car": {
+    "fullInsurance": "بیمه کامل",
+    "delivery": "تحویل در محل",
+    "support247": "۲۴/۷ پشتیبانی",
+    "back": "بازگشت",
+    "loading": "در حال بارگذاری",
+    "carNotFound": "موتر مورد نظر یافت نشد",
+    "backToCars": "بازگشت به موترها",
+    "bookNow": "رزرو اکنون",
+    "share": "اشتراک گذاری",
+    "reviews": "نظرات",
+    "comments": "دیدگاه‌ها",
+
+    "specs": {
+      "capacity": "ظرفیت",
+      "fuel": "سوخت",
+      "mileage": "کیلومتر",
+      "year": "سال"
+    },
+
+    "fuelTypes": {
+      "petrol": "پطرول",
+      "diesel": "دیزل",
+      "electric": "برقی",
+      "hybrid": "هایبرید"
+    },
+
+    "transmission": {
+      "automatic": "اتوماتیک",
+      "manual": "دستی"
+    },
+
+    "tabs": {
+      "specs": "مشخصات فنی",
+      "features": "امکانات",
+      "policy": "شرایط کرایه"
+    },
+
+    "policy": {
+      "validLicense": "گواهینامه معتبر رانندگی ضروری است",
+      "minimumAge": "حداقل سن راننده: ۱۸ سال",
+      "freeDelivery": "تحویل در محل: رایگان برای رزرو بالای ۳ روز",
+      "freeCancellation": "لغو رایگان تا ۲۴ ساعت قبل از تحویل",
+      "unlimitedMileage": "کیلومتراژ نامحدود شامل قیمت است",
+      "support": "کمک‌رسانی ۲۴/۷ در طول کرایه"
+    },
+
+    "trust": {
+      "insurance": "بیمه کامل",
+      "confirmation": "تایید فوری",
+      "delivery": "تحویل در محل",
+      "support": "۲۴/۷ پشتیبانی"
+    }
+  },
+  "carSpecs": {
+    "specifications": "مشخصات فنی",
+    "description": "توضیحات",
+    "features": "ویژگی‌ها و امکانات",
+    "brand": "برند",
+    "model": "مدل",
+    "year": "سال",
+    "seats": "صندلی",
+    "personCount": "{{count}} نفر",
+    "personCount_plural": "{{count}} نفر",
+    "transmission": "گیربکس",
+    "fuelType": "نوع تیل",
+    "mileage": "کیلومتراژ",
+    "mileageValue": "{{mileage}} کیلومتر",
+    "color": "رنگ",
+    "licensePlate": "نمبر پلیت",
+    "unspecified": "نامشخص",
+    "available": "قابل رزرو",
+    "unavailable": "غیرقابل دسترس",
+    "temporarilyUnavailable": "این موتر موقتاً غیرقابل دسترس است. لطفاً بعداً مراجعه کنید."
+  },
+  "carFeatures": {
+    "airConditioning": "تهویه مطبوع",
+    "heatedSeats": "صندلی گرم‌شونده",
+    "bluetooth": "بلوتوث",
+    "wifi": "وای‌فای",
+    "gps": "جی‌پی‌اس",
+    "coffeeMachine": "قهوه‌ساز",
+    "usbCharger": "شارژر یو‌اس‌بی"
+  },
+  "carReviews": {
+    "reviews": "نظرات",
+    "writeReview": "نوشتن نظر",
+    "reviewCount": "{{count}} نظر",
+    "reviewCount_plural": "{{count}} نظر",
+    "newest": "جدیدترین",
+    "highestRated": "بالاترین امتیاز",
+    "lowestRated": "پایین‌ترین امتیاز",
+    "noReviews": "هنوز نظری ثبت نشده است",
+    "beFirstToReview": "اولین نفری باشید که تجربه خود را به اشتراک می‌گذارد.",
+    "reviewsAfterBooking": "نظرات پس از اتمام کرایه در اینجا نمایش داده می‌شوند.",
+    "loadMore": "بارگذاری نظرات بیشتر"
+  },
+  "feedbackForm": {
+    "writeReview": "نوشتن نظر",
+    "editReview": "ویرایش نظر",
+    "yourRating": "امتیاز شما",
+    "titlePlaceholder": "خلاصه (اختیاری)",
+    "commentPlaceholder": "تجربه خود را به اشتراک بگذارید...",
+    "submitReview": "ثبت نظر",
+    "ratingRequired": "لطفاً امتیاز دهید",
+    "commentRequired": "لطفاً نظر خود را بنویسید",
+    "createSuccess": "نظر ثبت شد!",
+    "updateSuccess": "نظر ویرایش شد!",
+    "errorMessage": "خطایی رخ داد. لطفاً دوباره تلاش کنید.",
+    "common": {
+      "cancel": "لغو",
+      "submitting": "در حال ارسال..."
+    }
+  },
+  "reviewCard": {
+    "anonymous": "ناشناس",
+    "verifiedBooking": "کرایه تایید شده",
+    "ownerResponse": "پاسخ از طرف مالک",
+    "deleteConfirmTitle": "حذف این نظر؟",
+    "deleteConfirmDescription": "این اقدام قابل بازگشت نیست.",
+    "delete": "حذف",
+    "deleteSuccess": "نظر حذف شد",
+    "deleteError": "حذف نظر انجام نشد",
+    "editReview": "ویرایش نظر",
+    "deleteReview": "حذف نظر",
+    "common": {
+      "cancel": "لغو "
+    }
+  },
+  "carComments": {
+    "comments": "نظرات",
+    "commentPlaceholder": "نظر خود را به اشتراک بگذارید...",
+    "loginToJoin": "برای پیوستن به گفتگو وارد شوید",
+    "noComments": "هنوز نظری وجود ندارد",
+    "beFirstToComment": "اولین نفری باشید که نظر می‌دهد.",
+    "loadMore": "بارگذاری نظرات بیشتر"
+  },
+  "commentInput": {
+    "writePlaceholder": "نظر خود را بنویسید...",
+    "replyPlaceholder": "پاسخ خود را بنویسید...",
+    "editPlaceholder": "نظر خود را ویرایش کنید...",
+    "post": "ارسال",
+    "edit": "ویرایش",
+    "charCount": "{{current}}/{{max}}",
+    "exceedsLimit": "بیشتر از حد مجاز",
+    "commentRequired": "لطفاً نظر خود را بنویسید",
+    "commentTooLong": "نظر نمی‌تواند بیشتر از {{max}} کاراکتر باشد",
+    "createSuccess": "نظر ارسال شد",
+    "updateSuccess": "نظر ویرایش شد",
+    "errorMessage": "خطایی رخ داد. لطفاً دوباره تلاش کنید.",
+    "shortcutHint": "برای ارسال",
+    "common": {
+      "cancel": "لغو",
+      "sending": "در حال ارسال..."
+    }
+  },
+
+  "commentItem": {
+    "anonymous": "ناشناس",
+    "justNow": "همین الان",
+    "minutesAgo": "{{count}} دقیقه پیش",
+    "minutesAgo_plural": "{{count}} دقیقه پیش",
+    "hoursAgo": "{{count}} ساعت پیش",
+    "hoursAgo_plural": "{{count}} ساعت پیش",
+    "daysAgo": "{{count}} روز پیش",
+    "daysAgo_plural": "{{count}} روز پیش",
+    "edited": "ویرایش شده",
+    "pendingApproval": "در انتظار تایید",
+    "teamResponse": "پاسخ از طرف تیم",
+    "reply": "پاسخ",
+    "edit": "ویرایش",
+    "delete": "حذف",
+    "hideReplies": "مخفی کردن",
+    "showRepliesCount": "نمایش {{count}} پاسخ",
+    "showRepliesCount_plural": "نمایش {{count}} پاسخ",
+    "replyToUser": "پاسخ به {{name}}...",
+    "deleteConfirmTitle": "حذف این نظر؟",
+    "deleteConfirmDescription": "این کار تمام پاسخ‌ها را نیز حذف خواهد کرد. این اقدام قابل بازگشت نیست.",
+    "deleteSuccess": "نظر حذف شد",
+    "deleteError": "حذف نظر انجام نشد",
+    "likeError": "به‌روزرسانی لایک ناموفق بود",
+    "loginToLike": "لطفاً برای لایک کردن وارد شوید",
+    "common": {
+      "cancel": "لغو"
+    }
+  },
+  "bookingCalendar": {
+    "bookThisCar": "رزرو این موتر",
+    "perDay": "فی روز",
+    "selectDuration": "انتخاب مدت زمان رزرو",
+    "bookingSummary": "خلاصه رزرو",
+    "startDate": "تاریخ شروع",
+    "endDate": "تاریخ ختم",
+    "duration": "مدت زمان",
+    "daysCount": "{{count}} روز",
+    "daysCount_plural": "{{count}} روز",
+    "discount": "تخفیف",
+    "weeklyDiscount": "تخفیف هفتگی",
+    "monthlyDiscount": "تخفیف ماهانه",
+    "total": "مجموع",
+    "selectDates": "انتخاب تاریخ‌ها",
+    "bookNowPrice": "رزرو کردن - {{price}}",
+    "freeCancellation": "لغو رایگان",
+    "bestPriceGuarantee": "ضمانت بهترین قیمت",
+    "carUnavailable": "این موتر در حال حاضر غیرقابل دسترس است. لطفاً بعداً مراجعه کنید یا گزینه‌های دیگر را مشاهده نمایید."
+  },
+  "carCard": {
+    "unavailable": "غیرقابل دسترس",
+    "electric": "برقی",
+    "perDay": "/ روز",
+    "capacity": "ظرفیت",
+    "fuel": "سوخت",
+    "mileage": "کیلومتر",
+    "seatsCount": "{{count}} صندلی",
+    "seatsCount_plural": "{{count}} صندلی",
+    "viewDetails": "مشاهده جزئیات",
+    "notAvailable": "در دسترس نیست",
+    "carFeatures": {
+      "airconditioning": "تهویه مطبوع",
+      "heatedseats": "صندلی گرم",
+      "bluetooth": "بلوتوث",
+      "wifi": "وای‌فای",
+      "gps": "جی‌پی‌اس",
+      "coffeemachine": "قهوه‌ساز",
+      "usbcharger": "شارژر یو‌اس‌بی",
+      "navigation": "سیستم ناوبری",
+      "sunroof": "سانروف",
+      "leatherseats": "صندلی چرمی",
+      "backupcamera": "دوربین عقب",
+      "parkingsensors": "سنسور پارک",
+      "cruisecontrol": "کروز کنترل"
+    }
+  },
+  "carFilters": {
+    "filters": "فیلترها",
+    "search": "جستجو",
+    "searchPlaceholder": "جستجو بر اساس نام، برند...",
+    "brand": "برند",
+    "allBrands": "همه برندها",
+    "priceRange": "محدوده قیمت (فی روز)",
+    "transmission": "گیربکس",
+    "fuelType": "نوع تیل",
+    "seats": "تعداد صندلی",
+    "all": "همه",
+    "seatsCount": "{{count}} صندلی",
+    "seatsCountPlus": "{{count}}+ صندلی",
+    "clearAllFilters": "حذف همه فیلترها"
+  },
+  "carSorting": {
+    "sortBy": "مرتب‌سازی",
+    "newestFirst": "جدیدترین اول",
+    "oldestFirst": "قدیمی‌ترین اول",
+    "priceLowToHigh": "قیمت: کم به زیاد",
+    "priceHighToLow": "قیمت: زیاد به کم",
+    "nameAscending": "نام: الف تا ی",
+    "nameDescending": "نام: ی تا الف",
+    "yearNewestFirst": "سال: جدیدترین اول",
+    "yearOldestFirst": "سال: قدیمی‌ترین اول"
+  },
+  "favoriteButton": {
+    "addedToFavorites": "به علاقه‌مندی‌ها اضافه شد",
+    "removedFromFavorites": "از علاقه‌مندی‌ها حذف شد",
+    "addToFavorites": "افزودن به علاقه‌مندی‌ها",
+    "removeFromFavorites": "حذف از علاقه‌مندی‌ها",
+    "errorOccurred": "خطایی رخ داد"
+  },
+  "navbar": {
+    "home": "صفحه اصلی",
+    "cars": "موتر ها",
+    "about": "درباره ما",
+    "contact": "تماس با ما",
+    "dashboard": "داشبورد",
+    "adminPanel": "پنل ادمین",
+    "profile": "پروفایل",
+    "logout": "خروج",
+    "login": "ورود",
+    "register": "ثبت نام"
+  },
+
+  "roles": {
+    "admin": "ادمین",
+    "user": "کاربر"
+  },
+  "footer": {
+    "brandDescription": "بهترین خدمات کرایه‌ی موتر را با ناوگان لوکس و مراقبت استثنایی از مشتری ما تجربه کنید.",
+    "quickLinks": "ارتباطات سریع",
+    "about": "در باره ما",
+    "ourCars": "موتر های ما",
+    "contact": "تماس با ما",
+    "faq": "پرسش‌های رایج",
+    "services": "خدمات",
+    "airportTransfers": "ترانسفر هوایی",
+    "longTermRentals": "کرایه بلندمدت",
+    "corporateAccounts": "حساب‌های شرکتی",
+    "chauffeuredServices": "خدمات راننده خصوصی",
+    "contactUs": "تماس با ما",
+    "address": "کابل ۱۲۳، کارته نو، ولایت کابل",
+    "copyright": "تمام حقوق محفوظ است."
+  },
+  "emptyState": {
+    "defaultTitle": "هیچ موتری یافت نشد",
+    "defaultDescription": "لطفاً فیلترها یا معیارهای جستجوی خود را تغییر دهید",
+    "resetFilters": "بازنشانی فیلترها",
+    "viewAllCars": "مشاهده همه موترها"
+  },
+  "protectedRoute": {
+    "checkingAccess": "در حال بررسی دسترسی...",
+    "unauthorized": "دسترسی غیرمجاز",
+    "redirecting": "در حال انتقال..."
+  },
+  "common": {
+    "profile": "پروفایل",
+    "settings": "تنظیمات",
+    "viewSite": "مشاهده سایت",
+    "darkMode": "حالت تاریک",
+    "lightMode": "حالت روشن",
+    "back": "بازگشت"
+  },
+  "adminNavbar": {
+    "adminPanel": "پنل مدیریت",
+    "admin": "ادمین",
+    "systemAdmin": "مدیر سیستم",
+    "logout": "خروج"
+  },
+  "adminSidebar": {
+    "dashboard": "داشبورد",
+    "carManagement": "مدیریت موترها",
+    "userManagement": "مدیریت کاربران",
+    "bookings": "رزروها",
+    "comments": "نظرات",
+    "messages": "پیام‌ها",
+    "help": "راهنما",
+    "admin": "ادمین",
+    "systemAdmin": "مدیر سیستم",
+    "logout": "خروج"
   }
 }

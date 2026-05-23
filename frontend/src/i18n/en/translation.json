@@ -487,5 +487,370 @@
     "loginRequired": "Email verified! Please log in.",
     "somethingWrong": "Something went wrong. Please try logging in.",
     "loading": "Verifying your email..."
+  },
+  "unauthorized": {
+    "title": "Unauthorized Access",
+    "description": "You do not have permission to view this page.",
+    "yourRole": "Your role:",
+    "allowedRoles": "Allowed roles:",
+    "goDashboard": "Go to Dashboard",
+    "goBack": "Back to Previous Page",
+
+    "roles": {
+      "admin": "Admin",
+      "user": "User"
+    }
+  },
+  "cars": {
+    "title": "Our Cars",
+    "description": "Choose from our collection of luxury and premium cars",
+
+    "empty": {
+      "title": "No cars found",
+      "description": "No cars matched your search criteria. Please change the filters.",
+      "resetFilters": "Reset Filters"
+    }
+  },
+  "car": {
+    "perDay": "per day",
+    "day": "day",
+    "availableForBooking": "Available for booking",
+    "notAvailable": "Not available",
+    "instantConfirmation": "Instant confirmation",
+    "fullInsurance": "Full insurance",
+    "delivery": "On-site delivery",
+    "support247": "24/7 support",
+    "back": "Back",
+    "loading": "Loading",
+    "carNotFound": "Car not found",
+    "backToCars": "Back to cars",
+    "bookNow": "Book now",
+    "share": "Share",
+    "reviews": "Reviews",
+    "comments": "Comments",
+
+    "specs": {
+      "capacity": "Capacity",
+      "fuel": "Fuel",
+      "mileage": "Mileage",
+      "year": "Year"
+    },
+
+    "fuelTypes": {
+      "petrol": "Petrol",
+      "diesel": "Diesel",
+      "electric": "Electric",
+      "hybrid": "Hybrid"
+    },
+
+    "transmission": {
+      "automatic": "Automatic",
+      "manual": "Manual"
+    },
+
+    "tabs": {
+      "specs": "Specifications",
+      "features": "Features",
+      "policy": "Rental Policy"
+    },
+
+    "policy": {
+      "validLicense": "A valid driving license is required",
+      "minimumAge": "Minimum driver age: 18 years",
+      "freeDelivery": "Free delivery for bookings over 3 days",
+      "freeCancellation": "Free cancellation up to 24 hours before pickup",
+      "unlimitedMileage": "Unlimited mileage included",
+      "support": "24/7 roadside assistance"
+    },
+
+    "trust": {
+      "insurance": "Full insurance",
+      "confirmation": "Instant confirmation",
+      "delivery": "On-site delivery",
+      "support": "24/7 support"
+    }
+  },
+  "carSpecs": {
+    "specifications": "Specifications",
+    "description": "Description",
+    "features": "Features & Amenities",
+    "brand": "Brand",
+    "model": "Model",
+    "year": "Year",
+    "seats": "Seats",
+    "personCount": "{{count}} person",
+    "personCount_plural": "{{count}} people",
+    "transmission": "Transmission",
+    "fuelType": "Fuel Type",
+    "mileage": "Mileage",
+    "mileageValue": "{{mileage}} km",
+    "color": "Color",
+    "licensePlate": "License Plate",
+    "unspecified": "Unspecified",
+    "available": "Available for Booking",
+    "unavailable": "Currently Unavailable",
+    "temporarilyUnavailable": "This car is temporarily unavailable. Please check back later."
+  },
+  "carFeatures": {
+    "airConditioning": "Air Conditioning",
+    "heatedSeats": "Heated Seats",
+    "bluetooth": "Bluetooth",
+    "wifi": "WiFi",
+    "gps": "GPS",
+    "coffeeMachine": "Coffee Machine",
+    "usbCharger": "USB Charger"
+  },
+  "carReviews": {
+    "reviews": "Reviews",
+    "writeReview": "Write a Review",
+    "reviewCount": "{{count}} review",
+    "reviewCount_plural": "{{count}} reviews",
+    "newest": "Newest",
+    "highestRated": "Highest Rated",
+    "lowestRated": "Lowest Rated",
+    "noReviews": "No reviews yet",
+    "beFirstToReview": "Be the first to share your experience.",
+    "reviewsAfterBooking": "Reviews will appear here after your booking is complete.",
+    "loadMore": "Load More Reviews"
+  },
+  "feedbackForm": {
+    "writeReview": "Write a Review",
+    "editReview": "Edit Review",
+    "yourRating": "Your Rating",
+    "titlePlaceholder": "Summary (optional)",
+    "commentPlaceholder": "Share your experience...",
+    "submitReview": "Submit Review",
+    "ratingRequired": "Please select a rating",
+    "commentRequired": "Please write your comment",
+    "createSuccess": "Review submitted successfully!",
+    "updateSuccess": "Review updated successfully!",
+    "errorMessage": "Something went wrong. Please try again.",
+    "common": {
+      "cancel": "Cancel",
+      "submitting": "Submitting..."
+    }
+  },
+  "reviewCard": {
+    "anonymous": "Anonymous",
+    "verifiedBooking": "Verified Booking",
+    "ownerResponse": "Owner's Response",
+    "deleteConfirmTitle": "Delete this review?",
+    "deleteConfirmDescription": "This action cannot be undone.",
+    "delete": "Delete",
+    "deleteSuccess": "Review deleted successfully",
+    "deleteError": "Failed to delete review",
+    "editReview": "Edit review",
+    "deleteReview": "Delete review",
+    "common": {
+      "cancel": "Cancel"
+    }
+  },
+
+  "carComments": {
+    "comments": "Comments",
+    "commentPlaceholder": "Share your thoughts...",
+    "loginToJoin": "Login to join the conversation",
+    "noComments": "No comments yet",
+    "beFirstToComment": "Be the first to comment.",
+    "loadMore": "Load more comments"
+  },
+  "commentInput": {
+    "writePlaceholder": "Write a comment...",
+    "replyPlaceholder": "Write a reply...",
+    "editPlaceholder": "Edit your comment...",
+    "post": "Post",
+    "edit": "Edit",
+    "charCount": "{{current}}/{{max}}",
+    "exceedsLimit": "Exceeds limit",
+    "commentRequired": "Please write a comment",
+    "commentTooLong": "Comment cannot exceed {{max}} characters",
+    "createSuccess": "Comment posted successfully",
+    "updateSuccess": "Comment updated successfully",
+    "errorMessage": "Something went wrong. Please try again.",
+    "shortcutHint": "to submit",
+    "common": {
+      "cancel": "Cancel",
+      "sending": "Sending..."
+    }
+  },
+
+  "commentItem": {
+    "anonymous": "Anonymous",
+    "justNow": "Just now",
+    "minutesAgo": "{{count}} minute ago",
+    "minutesAgo_plural": "{{count}} minutes ago",
+    "hoursAgo": "{{count}} hour ago",
+    "hoursAgo_plural": "{{count}} hours ago",
+    "daysAgo": "{{count}} day ago",
+    "daysAgo_plural": "{{count}} days ago",
+    "edited": "edited",
+    "pendingApproval": "Pending approval",
+    "teamResponse": "Team response",
+    "reply": "Reply",
+    "edit": "Edit",
+    "delete": "Delete",
+    "hideReplies": "Hide replies",
+    "showRepliesCount": "Show {{count}} reply",
+    "showRepliesCount_plural": "Show {{count}} replies",
+    "replyToUser": "Reply to {{name}}...",
+    "deleteConfirmTitle": "Delete this comment?",
+    "deleteConfirmDescription": "This will also delete all replies. This action cannot be undone.",
+    "deleteSuccess": "Comment deleted successfully",
+    "deleteError": "Failed to delete comment",
+    "likeError": "Failed to update like",
+    "loginToLike": "Please login to like",
+    "common": {
+      "cancel": "Cancel"
+    }
+  },
+  "bookingCalendar": {
+    "bookThisCar": "Book This Car",
+    "perDay": "per day",
+    "selectDuration": "Select rental duration",
+    "bookingSummary": "Booking Summary",
+    "startDate": "Start date",
+    "endDate": "End date",
+    "duration": "Duration",
+    "daysCount": "{{count}} day",
+    "daysCount_plural": "{{count}} days",
+    "discount": "Discount",
+    "weeklyDiscount": "Weekly discount",
+    "monthlyDiscount": "Monthly discount",
+    "total": "Total",
+    "selectDates": "Select dates",
+    "bookNowPrice": "Book Now - {{price}}",
+    "freeCancellation": "Free cancellation",
+    "bestPriceGuarantee": "Best price guarantee",
+    "carUnavailable": "This car is currently unavailable. Please check back later or view other options."
+  },
+  "carCard": {
+    "unavailable": "Unavailable",
+    "electric": "Electric",
+    "perDay": "/ day",
+    "capacity": "Capacity",
+    "fuel": "Fuel",
+    "mileage": "Mileage",
+    "seatsCount": "{{count}} seat",
+    "seatsCount_plural": "{{count}} seats",
+    "viewDetails": "View Details",
+    "notAvailable": "Not Available",
+    "carFeatures": {
+      "airconditioning": "A/C",
+      "heatedseats": "Heated Seats",
+      "bluetooth": "Bluetooth",
+      "wifi": "WiFi",
+      "gps": "GPS",
+      "coffeemachine": "Coffee Machine",
+      "usbcharger": "USB Charger",
+      "navigation": "Navigation",
+      "sunroof": "Sunroof",
+      "leatherseats": "Leather Seats",
+      "backupcamera": "Backup Camera",
+      "parkingsensors": "Parking Sensors",
+      "cruisecontrol": "Cruise Control"
+    }
+  },
+  "carFilters": {
+    "filters": "Filters",
+    "search": "Search",
+    "searchPlaceholder": "Search by name, brand...",
+    "brand": "Brand",
+    "allBrands": "All Brands",
+    "priceRange": "Price Range (per day)",
+    "transmission": "Transmission",
+    "fuelType": "Fuel Type",
+    "seats": "Seats",
+    "all": "All",
+    "seatsCount": "{{count}} seats",
+    "seatsCountPlus": "{{count}}+ seats",
+    "clearAllFilters": "Clear all filters"
+  },
+  "carSorting": {
+    "sortBy": "Sort by",
+    "newestFirst": "Newest first",
+    "oldestFirst": "Oldest first",
+    "priceLowToHigh": "Price: Low to High",
+    "priceHighToLow": "Price: High to Low",
+    "nameAscending": "Name: A to Z",
+    "nameDescending": "Name: Z to A",
+    "yearNewestFirst": "Year: Newest first",
+    "yearOldestFirst": "Year: Oldest first"
+  },
+  "favoriteButton": {
+    "addedToFavorites": "Added to favorites",
+    "removedFromFavorites": "Removed from favorites",
+    "addToFavorites": "Add to favorites",
+    "removeFromFavorites": "Remove from favorites",
+    "errorOccurred": "An error occurred"
+  },
+  "navbar": {
+    "home": "Home",
+    "cars": "Cars",
+    "about": "About",
+    "contact": "Contact",
+    "dashboard": "Dashboard",
+    "adminPanel": "Admin Panel",
+    "profile": "Profile",
+    "logout": "Logout",
+    "login": "Login",
+    "register": "Register"
+  },
+
+  "roles": {
+    "admin": "Admin",
+    "user": "User"
+  },
+  "footer": {
+    "brandDescription": "Experience the best car rental service with our luxury fleet and exceptional customer care.",
+    "quickLinks": "Quick Links",
+    "about": "About Us",
+    "ourCars": "Our Cars",
+    "contact": "Contact Us",
+    "faq": "FAQ",
+    "services": "Services",
+    "airportTransfers": "Airport Transfers",
+    "longTermRentals": "Long-term Rentals",
+    "corporateAccounts": "Corporate Accounts",
+    "chauffeuredServices": "Chauffeured Services",
+    "contactUs": "Contact Us",
+    "address": "Kabul 123, Karte Now, Kabul Province",
+    "copyright": "All rights reserved."
+  },
+  "emptyState": {
+    "defaultTitle": "No cars found",
+    "defaultDescription": "Try adjusting your filters or search criteria",
+    "resetFilters": "Reset Filters",
+    "viewAllCars": "View All Cars"
+  },
+  "protectedRoute": {
+    "checkingAccess": "Checking access...",
+    "unauthorized": "Unauthorized access",
+    "redirecting": "Redirecting..."
+  },
+  "common": {
+    "profile": "Profile",
+    "settings": "Settings",
+    "viewSite": "View Site",
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode",
+    "back": "Back"
+  },
+  "adminNavbar": {
+    "adminPanel": "Admin Panel",
+    "admin": "Admin",
+    "systemAdmin": "System Administrator",
+    "logout": "Logout"
+  },
+  "adminSidebar": {
+    "dashboard": "Dashboard",
+    "carManagement": "Car Management",
+    "userManagement": "User Management",
+    "bookings": "Bookings",
+    "comments": "Comments",
+    "messages": "Messages",
+    "help": "Help",
+    "admin": "Admin",
+    "systemAdmin": "System Admin",
+    "logout": "Logout"
   }
 }
