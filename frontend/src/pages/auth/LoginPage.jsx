@@ -10,7 +10,7 @@ import { Eye, EyeOff, Mail, Lock, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { AuthLayout } from "@/components/auth/AuthLayout";
+import { AuthLayout } from "@/components/Layouts/AuthLayout";
 
 import { useAuthStore } from "@/store/authStore";
 import { useTranslation } from "react-i18next";

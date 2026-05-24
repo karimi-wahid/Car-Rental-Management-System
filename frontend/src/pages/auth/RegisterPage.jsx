@@ -18,7 +18,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
-import { AuthLayout } from "@/components/auth/AuthLayout";
+import { AuthLayout } from "@/components/Layouts/AuthLayout";
 import { cn } from "@/lib/utils";
 import { useAuthStore } from "@/store/authStore";
 import { calculatePasswordStrength } from "@/utils/passwordStrength";

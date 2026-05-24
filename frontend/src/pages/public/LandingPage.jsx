@@ -1,8 +1,8 @@
-import CTASection from "../../components/landing/CTASection";
-import FeaturedCars from "../../components/landing/FeaturedCars";
-import FeaturesSection from "../../components/landing/FeaturesSection";
-import HeroSection from "../../components/landing/HeroSection";
-import HowItWorks from "../../components/landing/HowItWorks";
+import CTASection from "@/components/landing/CTASection";
+import FeaturedCars from "@/components/landing/FeaturedCars";
+import FeaturesSection from "@/components/landing/FeaturesSection";
+import HeroSection from "@/components/landing/HeroSection";
+import HowItWorks from "@/components/landing/HowItWorks";
 import { motion } from "motion/react";
 
 const LandingPage = () => {
