@@ -1,5 +1,6 @@
 import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
+import i18n from "@/i18n";
 
 export function cn(...inputs) {
   return twMerge(clsx(inputs));
@@ -16,7 +17,13 @@ export function getInitials(name) {
 }
 
 export function formatDate(date) {
-  return new Date(date).toLocaleDateString("fa-AF", {
+  const locale =
+    i18n.language === "en"
+      ? "en-US"
+      : i18n.language === "ps"
+        ? "ps-AF"
+        : "fa-AF";
+  return new Date(date).toLocaleDateString(locale, {
     year: "numeric",
     month: "long",
     day: "numeric",
@@ -24,7 +31,13 @@ export function formatDate(date) {
 }
 
 export function formatCurrency(amount) {
-  return new Intl.NumberFormat("AFN", {
+  const locale =
+    i18n.language === "en"
+      ? "en-US"
+      : i18n.language === "ps"
+        ? "ps-AF"
+        : "fa-AF";
+  return new Intl.NumberFormat(locale, {
     style: "currency",
     currency: "AFN",
     minimumFractionDigits: 0,
@@ -32,5 +45,11 @@ export function formatCurrency(amount) {
 }
 
 export function formatNumber(value) {
-  return new Intl.NumberFormat("fa-IR").format(value);
+  const locale =
+    i18n.language === "en"
+      ? "en-US"
+      : i18n.language === "ps"
+        ? "ps-AF"
+        : "fa-IR";
+  return new Intl.NumberFormat(locale).format(value);
 }

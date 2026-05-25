@@ -218,7 +218,7 @@ export const CarCard = ({ car, index = 0 }) => {
           className={cn(
             "w-full flex items-center justify-between px-4 py-3 rounded-2xl text-sm font-semibold transition-all duration-200",
             isAvailable
-              ? "bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 hover:bg-zinc-700 dark:hover:bg-zinc-100"
+              ? "bg-primary text-white hover:bg-zinc-700 dark:hover:bg-zinc-100"
               : "bg-zinc-100 dark:bg-zinc-800 text-zinc-400 cursor-not-allowed",
             isRTL ? "flex-row-reverse" : "",
           )}

@@ -34,7 +34,7 @@ app.use(
 
 // ── CORS ─────────────────────────────────────────────────────
 const allowedOrigins = process.env.FRONTEND_URL
-  ? process.env.FRONTEND_URL.split(',')
+  ? process.env.FRONTEND_URL
   : ['http://localhost:5173'];
 
 app.use(
@@ -77,7 +77,11 @@ app.use(express.urlencoded({ extended: true, limit: '10kb' }));
 
 // ── Data sanitization ─────────────────────────────────────────
 // NoSQL injection
-app.use(mongoSanitize());
+app.use(
+  mongoSanitize({
+    sanitizeQuery: false,
+  }),
+);
 
 // XSS — sanitize string fields in req.body
 app.use((req, res, next) => {
