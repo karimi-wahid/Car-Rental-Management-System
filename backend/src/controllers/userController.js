@@ -12,7 +12,7 @@ const filterObj = (obj, ...allowedFields) => {
 
 export const getAllUsers = catchAsync(async (req, res) => {
   // Get all users, optionally exclude sensitive fields
-  const users = await User.find().select('-password -__v');
+  const users = await User.find().select('-password -__v +active');
 
   res.status(200).json({
     status: 'success',
@@ -63,39 +63,41 @@ export const updateMe = catchAsync(async (req, res, next) => {
   });
 });
 
-export const updateAvatar = catchAsync(async (req, res, next) => {
-  console.log(req.user);
-  // multer file check
-  if (!req.file) {
-    return next(new AppError('لطفاً یک عکس انتخاب کنید', 400));
-  }
-
-  // update user avatar
-  const updatedUser = await User.findByIdAndUpdate(
-    req.user.id,
-    {
-      avatar: req.file.path,
-    },
-    {
-      new: true,
-      runValidators: true,
-    },
-  );
-
-  res.status(200).json({
-    status: 'success',
-    data: {
-      user: updatedUser,
-    },
-  });
-});
-
 export const deleteMe = catchAsync(async (req, res, next) => {
   await User.findByIdAndUpdate(req.user.id, { active: false });
 
   res.status(204).json({
     status: 'success',
     data: null,
+  });
+});
+
+export const toggleUserActive = catchAsync(async (req, res, next) => {
+  const user = await User.findById(req.params.id).select('+active');
+
+  if (!user) {
+    return next(new AppError('No user found with that ID.', 404));
+  }
+
+  // Prevent admin from deactivating themselves
+  if (user._id.toString() === req.user.id) {
+    return next(new AppError('You cannot deactivate your own account.', 400));
+  }
+
+  user.active = !user.active;
+  await user.save({ validateBeforeSave: false });
+
+  res.status(200).json({
+    status: 'success',
+    message: `User ${user.active ? 'activated' : 'deactivated'} successfully.`,
+    data: {
+      user: {
+        _id: user._id,
+        name: user.name,
+        email: user.email,
+        active: user.active,
+      },
+    },
   });
 });
 

@@ -504,6 +504,9 @@
   "cars": {
     "title": "Our Cars",
     "description": "Choose from our collection of luxury and premium cars",
+    "bookingSuccess": "Booking has been successful! Redirecting to your bookings...",
+    "bookingFailed": "Booking failed. Please try again.",
+    "loginToBook": "Please login to book this car",
 
     "empty": {
       "title": "No cars found",
@@ -845,11 +848,11 @@
   },
   "adminSidebar": {
     "dashboard": "Dashboard",
-    "carManagement": "Cars Management",
-    "userManagement": "Users Management",
-    "bookings": "Bookings Management",
-    "comments": "Comments Management",
-    "messages": "Messages Management",
+    "carManagement": "Cars",
+    "userManagement": "Users",
+    "bookings": "Bookings",
+    "comments": "Comments",
+    "messages": "Messages",
     "help": "Help",
     "admin": "Admin",
     "systemAdmin": "System Admin",
@@ -1116,6 +1119,11 @@
     "verificationSuccess": "User verified successfully",
     "unverificationSuccess": "User unverified successfully",
     "verificationError": "Failed to change verification status",
+    "activate": "Activate",
+    "suspendSuccess": "User suspended successfully",
+    "activateSuccess": "User activated successfully",
+    "suspendError": "Failed to update user status",
+    "suspended": "Suspended",
     "common": {
       "cancel": "Cancel",
       "confirm": "Confirm"

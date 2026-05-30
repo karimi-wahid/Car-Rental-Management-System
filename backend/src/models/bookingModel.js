@@ -78,7 +78,7 @@ bookingSchema.index({ startDate: 1, endDate: 1 });
 
 // Check for overlapping bookings
 bookingSchema.methods.isOverlapping = async function (start, end) {
-  const overlapping = await mongoose.model('Booking').findOne({
+  const overlapping = await Booking.findOne({
     car: this.car,
     status: { $in: [BookingStatus.CONFIRMED, BookingStatus.IN_PROGRESS] },
     _id: { $ne: this._id }, // Exclude current booking when updating

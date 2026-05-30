@@ -28,7 +28,7 @@ export const emailTemplates = {
             overflow: hidden;
           }
           .header {
-            background: linear-gradient(135deg, #95122C, #100C08);
+            background: linear-gradient(135deg, #3D7E6C, #265447);
             padding: 40px 30px;
             text-align: center;
           }
@@ -45,7 +45,7 @@ export const emailTemplates = {
           .button {
             display: inline-block;
             padding: 14px 32px;
-            background: linear-gradient(135deg, #95122C, #100C08);
+            background: linear-gradient(135deg, #3D7E6C, #265447);
             color: #fff;
             text-decoration: none;
             border-radius: 12px;
@@ -160,7 +160,7 @@ export const emailTemplates = {
             overflow: hidden;
           }
           .header {
-            background: linear-gradient(135deg, #059669, #047857);
+            background: linear-gradient(135deg, #3D7E6C, #265447);
             padding: 40px 30px;
             text-align: center;
           }
@@ -177,7 +177,7 @@ export const emailTemplates = {
           .button {
             display: inline-block;
             padding: 14px 32px;
-            background: linear-gradient(135deg, #059669, #047857);
+            background: linear-gradient(135deg, #3D7E6C, #265447);
             color: #fff;
             text-decoration: none;
             border-radius: 12px;
@@ -295,7 +295,7 @@ export const emailTemplates = {
           overflow: hidden;
         }
         .header {
-          background: linear-gradient(135deg, #dc2626, #b91c1c);
+          background: linear-gradient(135deg, #3D7E6C, #265447);;
           padding: 40px 30px;
           text-align: center;
         }
@@ -322,7 +322,7 @@ export const emailTemplates = {
         .button {
           display: inline-block;
           padding: 14px 32px;
-          background: linear-gradient(135deg, #dc2626, #b91c1c);
+          background: linear-gradient(135deg, #3D7E6C, #265447);
           color: white;
           text-decoration: none;
           border-radius: 12px;
@@ -424,7 +424,7 @@ export const emailTemplates = {
           overflow: hidden;
         }
         .header {
-          background: linear-gradient(135deg, #059669, #047857);
+          background: linear-gradient(135deg, #3D7E6C, #265447);;
           padding: 40px 30px;
           text-align: center;
         }
@@ -446,7 +446,7 @@ export const emailTemplates = {
         .button {
           display: inline-block;
           padding: 14px 32px;
-          background: linear-gradient(135deg, #059669, #047857);
+          background: linear-gradient(135deg, #3D7E6C, #265447);
           color: white;
           text-decoration: none;
           border-radius: 12px;

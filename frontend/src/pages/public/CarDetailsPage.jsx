@@ -18,6 +18,7 @@ import {
   ChevronLeft,
   ChevronRight,
   X,
+  ArrowRight,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -70,6 +71,7 @@ const CarDetailsPage = () => {
       fetchCarById(id);
       if (isAuthenticated) fetchUserBookings({ page: 1, limit: 50 });
     }
+    console.log(car);
   }, [id]);
 
   useEffect(() => {
@@ -188,7 +190,7 @@ const CarDetailsPage = () => {
               <ArrowLeft className="h-4 w-4" />
             )}
 
-            {t("common.back")}
+            {t("car.common.back")}
           </button>
 
           <div className="hidden md:block text-sm font-medium text-zinc-900 dark:text-white truncate max-w-xs">

@@ -69,7 +69,10 @@ const MyBookingsPage = () => {
   const handleModifyBooking = (bookingId) =>
     navigate(`/bookings/${bookingId}/modify`);
 
-  const handleViewDetails = (bookingId) => navigate(`/bookings/${bookingId}`);
+  const handleViewDetails = (bookingId) => {
+    navigate(`/bookings/${bookingId}`);
+    scrollTo(0, 0);
+  };
 
   const filteredBookings = useMemo(() => {
     return (bookings || []).filter(
@@ -281,7 +284,10 @@ const MyBookingsPage = () => {
             !searchQuery && activeTab === "all"
               ? {
                   label: t("myBookings.viewCars"),
-                  onClick: () => navigate("/cars"),
+                  onClick: () => {
+                    navigate("/cars");
+                    scrollTo(0, 0);
+                  },
                 }
               : undefined
           }

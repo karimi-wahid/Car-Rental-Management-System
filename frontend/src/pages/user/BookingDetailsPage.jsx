@@ -168,7 +168,12 @@ const BookingDetailsPage = () => {
           <p className="text-muted-foreground mb-4">
             {t("bookingDetails.notFoundDescription")}
           </p>
-          <Button onClick={() => navigate("/bookings")}>
+          <Button
+            onClick={() => {
+              navigate("/bookings");
+              scrollTo(0, 0);
+            }}
+          >
             {t("bookingDetails.backToBookings")}
           </Button>
         </Card>
@@ -191,11 +196,14 @@ const BookingDetailsPage = () => {
     >
       {/* Header */}
       <div
-        className={`flex items-center justify-between mb-6 ${isRTL ? "flex-row-reverse" : ""}`}
+        className={`flex items-center justify-between mb-6 ${isRTL ? "" : "flex-row-reverse"}`}
       >
         <Button
           variant="ghost"
-          onClick={() => navigate("/bookings")}
+          onClick={() => {
+            navigate("/bookings");
+            scrollTo(0, 0);
+          }}
           className="gap-2"
         >
           <ArrowRight className={`w-4 h-4 ${isRTL ? "ml-2" : "mr-2"}`} />
@@ -231,7 +239,7 @@ const BookingDetailsPage = () => {
           >
             <CardContent className="p-6">
               <div
-                className={`flex items-center justify-between ${isRTL ? "flex-row-reverse" : ""}`}
+                className={`flex items-center justify-between ${isRTL ? "" : "flex-row-reverse"}`}
               >
                 <div className={isRTL ? "text-right" : "text-left"}>
                   <p className="text-sm text-muted-foreground mb-1">
@@ -258,14 +266,14 @@ const BookingDetailsPage = () => {
           <Card>
             <CardHeader>
               <CardTitle
-                className={`flex items-center gap-2 ${isRTL ? "flex-row-reverse" : ""}`}
+                className={`flex items-center gap-2 ${isRTL ? "" : "flex-row-reverse"}`}
               >
                 <Car className={`w-5 h-5 ${isRTL ? "ml-2" : "mr-2"}`} />
                 {t("bookingDetails.carDetails")}
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className={`flex gap-6 ${isRTL ? "flex-row-reverse" : ""}`}>
+              <div className={`flex gap-6 ${isRTL ? "" : "flex-row-reverse"}`}>
                 <div className="w-48 h-32 rounded-lg overflow-hidden shrink-0">
                   <img
                     src={booking.car.images?.[0]?.url || "/placeholder-car.jpg"}
@@ -282,7 +290,7 @@ const BookingDetailsPage = () => {
                     {booking.car.year}
                   </p>
                   <div
-                    className={`flex flex-wrap gap-2 ${isRTL ? "justify-end" : "justify-start"}`}
+                    className={`flex flex-wrap gap-2 ${isRTL ? "justify-start" : "justify-end"}`}
                   >
                     <Badge variant="outline">
                       {getTransmissionText(booking.car.transmission)}
@@ -305,7 +313,7 @@ const BookingDetailsPage = () => {
           <Card>
             <CardHeader>
               <CardTitle
-                className={`flex items-center gap-2 ${isRTL ? "flex-row-reverse" : ""}`}
+                className={`flex items-center gap-2 ${isRTL ? "" : "flex-row-reverse"}`}
               >
                 <Calendar className={`w-5 h-5 ${isRTL ? "ml-2" : "mr-2"}`} />
                 {t("bookingDetails.rentalDetails")}
@@ -342,7 +350,7 @@ const BookingDetailsPage = () => {
           <Card>
             <CardHeader>
               <CardTitle
-                className={`flex items-center gap-2 ${isRTL ? "flex-row-reverse" : ""}`}
+                className={`flex items-center gap-2 ${isRTL ? "" : "flex-row-reverse"}`}
               >
                 <CreditCard className={`w-5 h-5 ${isRTL ? "ml-2" : "mr-2"}`} />
                 {t("bookingDetails.priceSummary")}
@@ -350,7 +358,7 @@ const BookingDetailsPage = () => {
             </CardHeader>
             <CardContent className="space-y-4">
               <div
-                className={`flex justify-between ${isRTL ? "flex-row-reverse" : ""}`}
+                className={`flex justify-between ${isRTL ? "" : "flex-row-reverse"}`}
               >
                 <span>
                   {formatCurrency(booking.car.pricePerDay * daysCount)}
@@ -364,7 +372,7 @@ const BookingDetailsPage = () => {
               <Separator />
 
               <div
-                className={`flex justify-between font-bold ${isRTL ? "flex-row-reverse" : ""}`}
+                className={`flex justify-between font-bold ${isRTL ? "" : "flex-row-reverse"}`}
               >
                 <span className="text-primary">
                   {formatCurrency(booking.totalPrice)}
@@ -378,7 +386,7 @@ const BookingDetailsPage = () => {
           <Card>
             <CardHeader>
               <CardTitle
-                className={`flex items-center gap-2 ${isRTL ? "flex-row-reverse" : ""}`}
+                className={`flex items-center gap-2 ${isRTL ? "" : "flex-row-reverse"}`}
               >
                 <FileText className={`w-5 h-5 ${isRTL ? "ml-2" : "mr-2"}`} />
                 {t("bookingDetails.cancellationPolicy")}
@@ -387,7 +395,7 @@ const BookingDetailsPage = () => {
             <CardContent>
               <ul className="space-y-2 text-sm">
                 <li
-                  className={`flex items-start gap-2 ${isRTL ? "flex-row-reverse" : ""}`}
+                  className={`flex items-start gap-2 ${isRTL ? "" : "flex-row-reverse"}`}
                 >
                   <Clock className="w-4 h-4 text-muted-foreground shrink-0 mt-0.5" />
                   <span className={isRTL ? "text-right" : "text-left"}>
@@ -395,7 +403,7 @@ const BookingDetailsPage = () => {
                   </span>
                 </li>
                 <li
-                  className={`flex items-start gap-2 ${isRTL ? "flex-row-reverse" : ""}`}
+                  className={`flex items-start gap-2 ${isRTL ? "" : "flex-row-reverse"}`}
                 >
                   <AlertCircle className="w-4 h-4 text-muted-foreground shrink-0 mt-0.5" />
                   <span className={isRTL ? "text-right" : "text-left"}>
@@ -403,7 +411,7 @@ const BookingDetailsPage = () => {
                   </span>
                 </li>
                 <li
-                  className={`flex items-start gap-2 ${isRTL ? "flex-row-reverse" : ""}`}
+                  className={`flex items-start gap-2 ${isRTL ? "" : "flex-row-reverse"}`}
                 >
                   <XCircle className="w-4 h-4 text-muted-foreground shrink-0 mt-0.5" />
                   <span className={isRTL ? "text-right" : "text-left"}>

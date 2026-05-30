@@ -15,6 +15,13 @@ import { useThemeStore } from "@/store/themeStore";
 import { getInitials } from "@/lib/utils";
 import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "../ui/select";
 
 const AdminNavbar = () => {
   const { t, i18n } = useTranslation();
@@ -27,6 +34,13 @@ const AdminNavbar = () => {
   const handleLogout = async () => {
     await logout();
     navigate("/login");
+  };
+
+  const handleLanguageChange = (lang) => {
+    i18n.changeLanguage(lang);
+    localStorage.setItem("lang", lang);
+    document.documentElement.dir = lang === "en" ? "ltr" : "rtl";
+    document.documentElement.lang = lang;
   };
 
   const getUserRoleText = () => {
@@ -55,6 +69,19 @@ const AdminNavbar = () => {
         <div
           className={`flex items-center gap-2 ${isRTL ? "order-first" : ""}`}
         >
+          <Select
+            defaultValue={i18n.language}
+            onValueChange={handleLanguageChange}
+          >
+            <SelectTrigger className="w-32">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="fa">{t("profile.persian")}</SelectItem>
+              <SelectItem value="ps">{t("profile.pashto")}</SelectItem>
+              <SelectItem value="en">{t("profile.english")}</SelectItem>
+            </SelectContent>
+          </Select>
           {/* Theme Toggle */}
           <Button variant="ghost" size="icon" onClick={toggleTheme}>
             {theme === "dark" ? (

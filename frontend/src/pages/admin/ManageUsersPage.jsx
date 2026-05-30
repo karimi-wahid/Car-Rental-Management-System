@@ -57,7 +57,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { PageHeader } from "@/components/common/PageHeader";
 import { Pagination } from "@/components/ui/pagination";
 
-import { formatDate, getInitials } from "@/lib/utils";
+import { cn, formatDate, getInitials } from "@/lib/utils";
 import { toast } from "react-hot-toast";
 
 import useUserStore from "@/store/userStore";
@@ -68,10 +68,9 @@ const ManageUsersPage = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [roleFilter, setRoleFilter] = useState("all");
   const [verificationFilter, setVerificationFilter] = useState("all");
-  const [isVerificationDialogOpen, setIsVerificationDialogOpen] =
-    useState(false);
   const [selectedUser, setSelectedUser] = useState(null);
   const [isRoleDialogOpen, setIsRoleDialogOpen] = useState(false);
+  const [activeFilter, setActiveFilter] = useState("all");
   const isRTL = i18n.language !== "en";
 
   const {
@@ -80,7 +79,7 @@ const ManageUsersPage = () => {
     pagination,
     getAllUsers,
     updateUserRole,
-    updateUserVerification,
+    toggleUserActive,
   } = useUserStore();
 
   useEffect(() => {
@@ -89,10 +88,6 @@ const ManageUsersPage = () => {
 
   const getRoleLabel = (role) => {
     return role === "admin" ? t("manageUsers.admin") : t("manageUsers.user");
-  };
-
-  const getVerificationLabel = (isVerified) => {
-    return isVerified ? t("manageUsers.verified") : t("manageUsers.unverified");
   };
 
   // Role change handler
@@ -117,30 +112,6 @@ const ManageUsersPage = () => {
       setIsRoleDialogOpen(false);
     } catch (error) {
       toast.error(t("manageUsers.roleChangeError"));
-      console.log(error);
-    }
-  };
-
-  // Verification change handler
-  const handleVerificationChange = async () => {
-    if (!selectedUser) return;
-
-    const newStatus = !selectedUser.isEmailVerified;
-
-    try {
-      const res = await updateUserVerification(selectedUser._id, newStatus);
-      const updatedUser = res.data.user || res.data.data?.user;
-      setSelectedUser(updatedUser);
-
-      toast.success(
-        newStatus
-          ? t("manageUsers.verificationSuccess")
-          : t("manageUsers.unverificationSuccess"),
-      );
-
-      setIsVerificationDialogOpen(false);
-    } catch (error) {
-      toast.error(t("manageUsers.verificationError"));
       console.log(error);
     }
   };
@@ -322,23 +293,35 @@ const ManageUsersPage = () => {
                         </TableCell>
 
                         <TableCell>
-                          <div
-                            className={`flex items-center gap-2 ${isRTL ? "flex-row-reverse" : ""}`}
-                          >
-                            {user.isEmailVerified ? (
-                              <>
-                                <CheckCircle className="text-green-500 w-4 h-4" />
-                                <span className="text-sm">
-                                  {t("manageUsers.verified")}
+                          <div className={`flex flex-col gap-1`}>
+                            <div
+                              className={`flex items-center gap-2 ${isRTL ? "flex-row-reverse" : ""}`}
+                            >
+                              {user.isEmailVerified ? (
+                                <>
+                                  <CheckCircle className="text-green-500 w-4 h-4" />
+                                  <span className="text-sm">
+                                    {t("manageUsers.verified")}
+                                  </span>
+                                </>
+                              ) : (
+                                <>
+                                  <XCircle className="text-yellow-500 w-4 h-4" />
+                                  <span className="text-sm">
+                                    {t("manageUsers.unverified")}
+                                  </span>
+                                </>
+                              )}
+                            </div>
+                            {user.active === false && (
+                              <div
+                                className={`flex items-center gap-2 ${isRTL ? "flex-row-reverse" : ""}`}
+                              >
+                                <Ban className="text-red-500 w-3.5 h-3.5" />
+                                <span className="text-xs text-red-500">
+                                  {t("manageUsers.suspended")}
                                 </span>
-                              </>
-                            ) : (
-                              <>
-                                <XCircle className="text-yellow-500 w-4 h-4" />
-                                <span className="text-sm">
-                                  {t("manageUsers.unverified")}
-                                </span>
-                              </>
+                              </div>
                             )}
                           </div>
                         </TableCell>
@@ -381,31 +364,42 @@ const ManageUsersPage = () => {
                                 {t("manageUsers.changeRole")}
                               </DropdownMenuItem>
 
-                              <DropdownMenuItem
-                                onClick={() => {
-                                  setSelectedUser(user);
-                                  setIsVerificationDialogOpen(true);
-                                }}
-                                className={isRTL ? "flex-row-reverse" : ""}
-                              >
-                                <Shield
-                                  className={`${isRTL ? "ml-2" : "mr-2"} w-4 h-4`}
-                                />
-                                {t("manageUsers.changeVerification")}
-                              </DropdownMenuItem>
-
                               <DropdownMenuSeparator />
 
                               <DropdownMenuItem
-                                className={`text-red-500 ${isRTL ? "flex-row-reverse" : ""}`}
-                                onClick={() => {
-                                  // Handle suspend action
+                                className={cn(
+                                  user.active === false
+                                    ? "text-green-600"
+                                    : "text-red-500",
+                                  isRTL ? "flex-row-reverse" : "",
+                                )}
+                                onClick={async () => {
+                                  const result = await toggleUserActive(
+                                    user._id,
+                                  );
+                                  if (result.success) {
+                                    toast.success(
+                                      result.active
+                                        ? t("manageUsers.activateSuccess")
+                                        : t("manageUsers.suspendSuccess"),
+                                    );
+                                  } else {
+                                    toast.error(t("manageUsers.suspendError"));
+                                  }
                                 }}
                               >
-                                <Ban
-                                  className={`${isRTL ? "ml-2" : "mr-2"} w-4 h-4`}
-                                />
-                                {t("manageUsers.suspend")}
+                                {user.active === false ? (
+                                  <CheckCircle
+                                    className={`${isRTL ? "ml-2" : "mr-2"} w-4 h-4`}
+                                  />
+                                ) : (
+                                  <Ban
+                                    className={`${isRTL ? "ml-2" : "mr-2"} w-4 h-4`}
+                                  />
+                                )}
+                                {user.active === false
+                                  ? t("manageUsers.activate")
+                                  : t("manageUsers.suspend")}
                               </DropdownMenuItem>
                             </DropdownMenuContent>
                           </DropdownMenu>
@@ -479,67 +473,6 @@ const ManageUsersPage = () => {
             </Button>
             <Button
               onClick={handleRoleChange}
-              className={isRTL ? "mr-2 sm:mr-0 sm:ml-2" : ""}
-            >
-              {t("manageUsers.common.confirm")}
-            </Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
-
-      {/* Verification Change Dialog */}
-      <Dialog
-        open={isVerificationDialogOpen}
-        onOpenChange={setIsVerificationDialogOpen}
-      >
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle className={isRTL ? "text-right" : "text-left"}>
-              {t("manageUsers.changeVerificationTitle")}
-            </DialogTitle>
-            <DialogDescription className={isRTL ? "text-right" : "text-left"}>
-              {t("manageUsers.changeVerificationDescription")}
-            </DialogDescription>
-          </DialogHeader>
-
-          <div className="py-4 space-y-3">
-            <p className={isRTL ? "text-right" : "text-left"}>
-              {t("manageUsers.userLabel")}:{" "}
-              <span className="font-medium">{selectedUser?.name}</span>
-            </p>
-            <p
-              className={`text-muted-foreground ${isRTL ? "text-right" : "text-left"}`}
-              dir="ltr"
-            >
-              {selectedUser?.email}
-            </p>
-            <p className={isRTL ? "text-right" : "text-left"}>
-              {t("manageUsers.currentStatus")}:{" "}
-              <Badge>
-                {getVerificationLabel(selectedUser?.isEmailVerified)}
-              </Badge>
-            </p>
-            <p className={isRTL ? "text-right" : "text-left"}>
-              {t("manageUsers.newStatus")}:{" "}
-              <Badge variant="outline">
-                {selectedUser?.isEmailVerified
-                  ? t("manageUsers.unverified")
-                  : t("manageUsers.verified")}
-              </Badge>
-            </p>
-          </div>
-
-          <DialogFooter
-            className={isRTL ? "flex-row-reverse sm:flex-row-reverse" : ""}
-          >
-            <Button
-              variant="outline"
-              onClick={() => setIsVerificationDialogOpen(false)}
-            >
-              {t("manageUsers.common.cancel")}
-            </Button>
-            <Button
-              onClick={handleVerificationChange}
               className={isRTL ? "mr-2 sm:mr-0 sm:ml-2" : ""}
             >
               {t("manageUsers.common.confirm")}

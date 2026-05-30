@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import { Car } from './carModel.js';
 
 const feedbackSchema = new mongoose.Schema(
   {
@@ -78,12 +79,12 @@ feedbackSchema.statics.calcAverageRating = async function (carId) {
   ]);
 
   if (stats.length > 0) {
-    await mongoose.model('Car').findByIdAndUpdate(carId, {
+    await Car.findByIdAndUpdate(carId, {
       averageRating: Math.round(stats[0].avgRating * 10) / 10,
       numRatings: stats[0].numRatings,
     });
   } else {
-    await mongoose.model('Car').findByIdAndUpdate(carId, {
+    await Car.findByIdAndUpdate(carId, {
       averageRating: 0,
       numRatings: 0,
     });

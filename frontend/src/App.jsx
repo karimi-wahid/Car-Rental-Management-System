@@ -1,6 +1,6 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { PageLoader } from "@/components/Loader/PageLoader";
+import { PageLoader } from "@/components/loader/PageLoader";
 import { Toaster } from "react-hot-toast";
 
 // Layouts

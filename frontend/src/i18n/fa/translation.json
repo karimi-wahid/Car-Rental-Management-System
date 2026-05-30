@@ -507,6 +507,9 @@
   "cars": {
     "title": "موترهای ما",
     "description": "از مجموعه موترهای لوکس و باکیفیت ما انتخاب کنید",
+    "bookingSuccess": "رزرو با موفقیت انجام شد! در حال انتقال به رزروهای شما...",
+    "bookingFailed": "رزرو انجام نشد. لطفاً دوباره تلاش کنید.",
+    "loginToBook": "لطفاً برای رزرو این موتر وارد شوید",
 
     "empty": {
       "title": "هیچ موتری یافت نشد",
@@ -1114,6 +1117,11 @@
     "verificationSuccess": "کاربر با موفقیت تایید شد",
     "unverificationSuccess": "تایید کاربر لغو شد",
     "verificationError": "تغییر وضعیت تایید ناموفق بود",
+    "activate": "فعال‌سازی",
+    "suspendSuccess": "کاربر موفقانه تعلیق شد",
+    "activateSuccess": "کاربر موفقانه فعال شد",
+    "suspendError": "خطا در تغییر وضعیت کاربر",
+    "suspended": "تعلیق شده",
     "common": {
       "cancel": "لغو",
       "confirm": "تایید"

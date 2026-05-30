@@ -253,7 +253,6 @@ export const getAllCars = catchAsync(async (req, res, next) => {
     }
 
     // Get booked car IDs for the date range
-    const Booking = mongoose.model('Booking');
     const bookedCarIds = await Booking.distinct('car', {
       status: { $in: ['confirmed', 'in_progress'] },
       $or: [
@@ -639,7 +638,6 @@ export const deleteCar = catchAsync(async (req, res, next) => {
   }
 
   // Check if car has any bookings
-  const Booking = mongoose.model('Booking');
   const bookingCount = await Booking.countDocuments({ car: id });
 
   if (bookingCount > 0) {
@@ -682,7 +680,6 @@ export const toggleCarAvailability = catchAsync(async (req, res, next) => {
 
   // ❗ Prevent deactivation if bookings exist
   if (!newAvailability && car.availability) {
-    const Booking = mongoose.model('Booking');
 
     const activeBookings = await Booking.findOne({
       car: id,
@@ -740,8 +737,6 @@ export const getCarStatistics = catchAsync(async (req, res, next) => {
     if (startDate) dateFilter.createdAt.$gte = new Date(startDate);
     if (endDate) dateFilter.createdAt.$lte = new Date(endDate);
   }
-
-  const Booking = mongoose.model('Booking');
 
   // Get all cars with their booking statistics
   const carStats = await Car.aggregate([
@@ -922,7 +917,6 @@ export const getCarStatistics = catchAsync(async (req, res, next) => {
 
 // Helper function to get detailed car statistics
 async function getDetailedCarStats(dateFilter) {
-  const Booking = mongoose.model('Booking');
 
   const detailedStats = await Booking.aggregate([
     { $match: dateFilter },
@@ -1005,7 +999,6 @@ export const getUniqueBrands = catchAsync(async (req, res, next) => {
   const totalBrands = brands.length;
 
   // Get brand popularity (most booked brands)
-  const Booking = mongoose.model('Booking');
   const popularBrands = await Booking.aggregate([
     {
       $match: { status: 'completed' },

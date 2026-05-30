@@ -62,7 +62,7 @@ const UserSidebar = () => {
       {/* User Profile Section */}
       <div className="p-6 border-b">
         <div
-          className={`flex items-center gap-4 ${isRTL ? "flex-row-reverse" : ""}`}
+          className={`flex items-center gap-4 ${isRTL ? "" : "flex-row-reverse"}`}
         >
           <Avatar className="h-16 w-16 ring-2 ring-primary/20">
             <AvatarImage src={user?.avatar} alt={user?.name} />
@@ -106,7 +106,7 @@ const UserSidebar = () => {
                     isActive
                       ? "bg-primary text-primary-foreground shadow-md"
                       : "text-muted-foreground",
-                    isRTL ? "flex-row-reverse" : "",
+                    isRTL ? "" : "flex-row-reverse",
                   )
                 }
                 end={item.href === "/dashboard"}
@@ -114,7 +114,7 @@ const UserSidebar = () => {
                 {({ isActive }) => (
                   <>
                     <div
-                      className={`flex items-center gap-3 ${isRTL ? "flex-row-reverse" : ""}`}
+                      className={`flex items-center gap-3 ${isRTL ? "" : "flex-row-reverse"}`}
                     >
                       <item.icon
                         className={cn(
@@ -146,7 +146,7 @@ const UserSidebar = () => {
       <div className="p-4 border-t">
         <div className="rounded-lg bg-muted/50 p-4">
           <div
-            className={`flex items-center gap-2 mb-2 ${isRTL ? "flex-row-reverse" : ""}`}
+            className={`flex items-center gap-2 mb-2 ${isRTL ? "" : "flex-row-reverse"}`}
           >
             <Headphones className="w-4 h-4 text-primary" />
             <h4 className="text-sm font-semibold">
@@ -160,7 +160,10 @@ const UserSidebar = () => {
           </p>
           <button
             className="w-full text-sm text-primary hover:text-primary/80 font-medium transition-colors"
-            onClick={() => navigate("/support")}
+            onClick={() => {
+              navigate("/support");
+              scrollTo(0, 0);
+            }}
           >
             {t("userSidebar.getSupport")}
           </button>

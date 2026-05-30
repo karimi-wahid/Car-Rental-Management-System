@@ -161,7 +161,9 @@ const ManageCarsPage = () => {
       fuelType: car.fuelType,
       pricePerDay: car.pricePerDay,
       description: car.description,
-      features: car.features,
+      features: Array.isArray(car.features)
+        ? car.features
+        : JSON.parse(car.features || "[]"),
       licensePlate: car.licensePlate,
       mileage: car.mileage || 0,
       color: car.color || "",

@@ -56,8 +56,6 @@ import useUserStore from "@/store/userStore";
 import { useAuthStore } from "@/store/authStore";
 import { useTranslation } from "react-i18next";
 
-import axios from "axios";
-
 /* -------------------------------------------------------------------------- */
 /*                                  ZOD SCHEMA                                */
 /* -------------------------------------------------------------------------- */
@@ -120,7 +118,6 @@ const calculatePasswordStrength = (password) => {
 
 const ProfilePage = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [uploadingAvatar, setUploadingAvatar] = useState(false);
   const [isPasswordLoading, setIsPasswordLoading] = useState(false);
   const [showCurrentPassword, setShowCurrentPassword] = useState(false);
   const [showNewPassword, setShowNewPassword] = useState(false);
@@ -246,35 +243,6 @@ const ProfilePage = () => {
   };
 
   /* -------------------------------------------------------------------------- */
-  /*                               AVATAR UPLOAD                                */
-  /* -------------------------------------------------------------------------- */
-
-  const handleAvatarUpload = async (event) => {
-    const file = event.target.files?.[0];
-    if (!file) return;
-    setUploadingAvatar(true);
-    try {
-      const formData = new FormData();
-      formData.append("avatar", file);
-      await axios.patch(
-        `${import.meta.env.VITE_API_URL}/users/update-avatar`,
-        formData,
-        {
-          withCredentials: true,
-          headers: { "Content-Type": "multipart/form-data" },
-        },
-      );
-      toast.success(t("profile.avatarUpdateSuccess"));
-    } catch (error) {
-      toast.error(
-        error.response?.data?.message || t("profile.avatarUpdateError"),
-      );
-    } finally {
-      setUploadingAvatar(false);
-    }
-  };
-
-  /* -------------------------------------------------------------------------- */
   /*                               Delete Account                                */
   /* -------------------------------------------------------------------------- */
 
@@ -337,23 +305,6 @@ const ProfilePage = () => {
                     {getInitials(user?.name || t("profile.user"))}
                   </AvatarFallback>
                 </Avatar>
-                <label
-                  htmlFor="avatar-upload"
-                  className="absolute inset-0 flex items-center justify-center rounded-full bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
-                >
-                  {uploadingAvatar ? (
-                    <Loader2 className="w-6 h-6 text-white animate-spin" />
-                  ) : (
-                    <Camera className="w-6 h-6 text-white" />
-                  )}
-                </label>
-                <input
-                  id="avatar-upload"
-                  type="file"
-                  accept="image/*"
-                  className="hidden"
-                  onChange={handleAvatarUpload}
-                />
               </div>
               <h2 className="text-xl font-semibold mb-1">{user?.name}</h2>
               <p className="text-sm text-muted-foreground mb-4">

@@ -11,6 +11,7 @@ import {
   updateUserService,
   deleteUserService,
   updateUserRoleService,
+  toggleUserActiveService,
 } from "@/services/userService";
 import useFavoriteStore from "./favoriteStore";
 
@@ -223,6 +224,29 @@ const useUserStore = create(
             loading: false,
           });
           throw err;
+        }
+      },
+
+      toggleUserActive: async (id) => {
+        set({ loading: true, error: null });
+        try {
+          const res = await toggleUserActiveService(id);
+          const updated = res.data.data.user;
+
+          set((state) => ({
+            users: state.users.map((u) =>
+              u._id === id ? { ...u, active: updated.active } : u,
+            ),
+            loading: false,
+          }));
+
+          return { success: true, active: updated.active };
+        } catch (err) {
+          set({
+            error: err.response?.data?.message || "Failed to toggle status",
+            loading: false,
+          });
+          return { success: false };
         }
       },
 
