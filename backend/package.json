@@ -9,7 +9,7 @@
     "start:prod": "cross-env NODE_ENV=production node src/server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Wahidullah Karimi",
   "type": "module",
   "license": "ISC",
   "dependencies": {

@@ -35,26 +35,10 @@ app.use(
 // ── CORS ─────────────────────────────────────────────────────
 app.use(
   cors({
-    origin: 'http://localhost:5173',
+    origin: 'https://car-rental-management-system-five.vercel.app',
     credentials: true,
   }),
 );
-// const allowedOrigins = process.env.FRONTEND_URL
-//   ? process.env.FRONTEND_URL
-//   : ['http://localhost:5173', 'http://localhost:5174'];
-
-// app.use(
-//   cors({
-//     origin: (origin, callback) => {
-//       if (!origin || allowedOrigins.includes(origin)) {
-//         callback(null, true);
-//       } else {
-//         callback(new Error('Not allowed by CORS'));
-//       }
-//     },
-//     credentials: true,
-//   }),
-// );
 
 // ── Rate limiting ─────────────────────────────────────────────
 const apiLimiter = rateLimit({
@@ -78,8 +62,8 @@ app.use('/api/v1/auth', authLimiter);
 
 // ── Body parsing ──────────────────────────────────────────────
 app.use(cookieParser());
-app.use(express.json({ limit: '10kb' }));
-app.use(express.urlencoded({ extended: true, limit: '10kb' }));
+app.use(express.json({ limit: '3mb' }));
+app.use(express.urlencoded({ extended: true, limit: '3mb' }));
 
 // ── Data sanitization ─────────────────────────────────────────
 app.use((req, res, next) => {
@@ -125,6 +109,13 @@ app.use((req, res, next) => {
 });
 
 // ── Routes ────────────────────────────────────────────────────
+app.get('/', (req, res) => {
+  res.status(200).json({
+    status: 'success',
+    message:
+      'Welcome to the Car Rental Management System API! Visit /api/v1 for API endpoints. build by @karimi_wahid',
+  });
+});
 app.use('/api/v1/users', userRouter);
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/cars', carRouter);
