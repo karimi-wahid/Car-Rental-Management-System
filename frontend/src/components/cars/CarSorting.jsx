@@ -29,12 +29,12 @@ export const CarSorting = ({ value, order, onSortChange }) => {
 
   return (
     <div
-      className={`flex items-center ${isRTL ? "space-x-4 space-x-reverse" : "space-x-4"} ${isRTL ? "flex-row-reverse" : ""}`}
+      className={`flex items-center ${isRTL ? "space-x-4 space-x-reverse" : "space-x-4"}`}
       dir={isRTL ? "rtl" : "ltr"}
     >
       <Label
         htmlFor="sort"
-        className={`text-sm font-medium whitespace-nowrap px-2 ${isRTL ? "text-right" : "text-left"}`}
+        className={`text-sm font-medium whitespace-nowrap px-2 ${isRTL ? "text-left" : "text-left"}`}
       >
         {t("carSorting.sortBy")} :
       </Label>
